@@ -1,0 +1,18 @@
+[
+  {
+    "Id": 1,
+    "Name": "Mobiles"
+  },
+  {
+    "Id": 2,
+    "Name": "HeadPhones"
+  },
+  {
+    "Id": 3,
+    "Name": "Chargers"
+  },
+  {
+    "Id": 4,
+    "Name": "Cases"
+  }
+]
