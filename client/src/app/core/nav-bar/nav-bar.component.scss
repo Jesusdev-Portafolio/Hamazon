@@ -11,6 +11,23 @@
     right: 35px;
 }
 
+a{
+    text-decoration: none;
+    color: #343a40;
+
+    &.active{
+        color: orange;
+    }
+}
+
+.logo{
+    cursor:pointer;
+
+    &:focus{
+        outline: none;
+    }
+}
+
 
 @media (max-width: 2560px){
     .main-nav{
