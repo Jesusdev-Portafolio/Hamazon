@@ -1,6 +1,6 @@
 import { NgModule , LOCALE_ID  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 
 //seteando euros porque por defecto viene en dolares
 import { registerLocaleData } from '@angular/common';
@@ -13,8 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
-import { ShopModule } from './shop/shop.module';
 import { HomeModule } from './home/home.module';
+import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 
 @NgModule({
   declarations: [
@@ -33,6 +33,7 @@ import { HomeModule } from './home/home.module';
     provide: LOCALE_ID,
     useValue: 'de-DE' 
   },
+  {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
 ],
   bootstrap: [AppComponent]
 })

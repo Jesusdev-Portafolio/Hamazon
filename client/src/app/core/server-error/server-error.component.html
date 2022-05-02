@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <h4>Internal Server Error</h4>
+     <ng-container *ngIf="error">
+        <h5 class="text-danger">Error {{error.message}}</h5>
+        <p class ="font-weight-bold">An internal Server has been ocurred during the request, please refresh the page and try again, if this error keep appearing, please contact the support area</p>
+        <p>Que puedes Hacer ahora?</p>
+        <ol>
+            <li>Abre Chrome dev Tools</li>
+            <li>Inspecciona la barra de Red</li>
+            <li>Ve que petición ha fallado</li>
+            <li>Examina la peticion y su URL, verifica que es correcta</li>
+            <li>Reproduce el error el Postman - si tenemos la misma respuesta en Postman, entonces el problema NO ES CON ANGULAR si no con la API</li>
+        </ol>
+        <p>Sigue estos pasos - aqui es donde deberias empezar a buscar amigo desarrollador :D </p>
+        <code class ="mt-5" style="background-color: whitesmoke;">{{error.details}}</code>
+     </ng-container>
+    
+</div>
