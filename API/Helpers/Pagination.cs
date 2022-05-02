@@ -4,7 +4,7 @@
     {
         public Pagination(int pageIndex, int pageSize, int count, IReadOnlyList<T> data)
         {
-            PageSize = (pageSize < 1 ? 1 : pageSize > 10 ? 10 : pageSize);
+            PageSize = (pageSize < 1 ? 1 : pageSize > 20 ? 20 : pageSize);
             TotalItems = count;
             TotalPAges = (int)Math.Ceiling((decimal)TotalItems / (decimal)pageSize);
             PageIndex = (pageIndex < 1 ? 1 : pageIndex > TotalPAges ? TotalPAges : pageIndex);

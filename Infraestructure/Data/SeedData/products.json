@@ -67,7 +67,7 @@
         "Name": "Huawei Freebuds Lipstick",
         "Description": "HUAWEI FreeBuds Lipstick offers a stunning change of look and sound with its ultra-chic design that sets a new trend, as well as its innovative features that allow you to enjoy a more select and superior audio experience.",
         "Price": 159.99,
-        "PictureUrl": "images/products/Huawei_Freebuds_Lipstick.png",
+        "PictureUrl": "images/products/freebuds-lipstick-red.png",
         "ProductTypeId": 2,
         "ProductBrandId": 4
     },
@@ -83,7 +83,7 @@
         "Name": "Lg Q60 Phone Case",
         "Description": "Guaranteed Protection for your Mobile",
         "Price": 12.99,
-        "PictureUrl": "images/products/Lg_Q60_PhoneCase",
+        "PictureUrl": "images/products/Lg_Q60_PhoneCase.png",
         "ProductTypeId": 4,
         "ProductBrandId": 3
     },

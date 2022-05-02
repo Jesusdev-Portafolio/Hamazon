@@ -33,7 +33,7 @@ namespace API.Controllers
 
         [HttpGet]
         public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts
-            ([FromQuery] string orderBy = "Name", string AscDesc = "Asc", int brandId = 999, int typeId = 999, int pageIndex = 1, int pageSize = 5, string search =  null)
+            ([FromQuery] string orderBy = "Name", string AscDesc = "Asc", int brandId = 999, int typeId = 999, int pageIndex = 1, int pageSize = 6, string search =  null)
         {
             ProductType productType = await _productTypeRepo.loadProductType(typeId);
             ProductBrand productBrand = await _productBrandRepo.loadProductBrand(brandId);
@@ -42,8 +42,10 @@ namespace API.Controllers
             var totalItems = products.Count;
             var data = _mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products);
 
-            return products.Count > 0 ? Ok(new Pagination<ProductToReturnDto>(pageIndex, pageSize, totalItems, data)) 
-                : BadRequest("No hay productos Disponibles con las especificaciones indicadas en estos momentos");    
+            /* return products.Count > 0 ? Ok(new Pagination<ProductToReturnDto>(pageIndex, pageSize, totalItems, data)) 
+                 : BadRequest("No hay productos Disponibles con las especificaciones indicadas en estos momentos");  
+            */
+            return Ok(new Pagination<ProductToReturnDto>(pageIndex, pageSize, totalItems, data));
         }
 
         [HttpGet("{id}")]
