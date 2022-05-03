@@ -4,72 +4,13 @@ i:{00000000-0000-0000-0000-000000000000}:ProyectShop.sln
 i:{00000000-0000-0000-0000-000000000000}:Solution Items
 ++.gitignore
 i:{fca187c4-a74a-4cb4-92f0-3fb7e150894a}:C:\Users\jesus\source\repos\Proyecto\ProyectShop\.gitignore
-++Core
-i:{00000000-0000-0000-0000-000000000000}:Core
-i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\source\repos\proyecto\proyectshop\core\core.csproj
-++Dependencias
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:>400
-i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:>401
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:>602
-++Entities
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\entities\
-++BaseEntity.cs
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\entities\baseentity.cs
-++Product.cs
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\entities\product.cs
-++ProductBrand.cs
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\entities\productbrand.cs
-++ProductType.cs
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\entities\producttype.cs
-++Interfaces
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\interfaces\
-++IBrandRepository.cs
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\interfaces\ibrandrepository.cs
-++IGenericRepository.cs
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\interfaces\igenericrepository.cs
-++IProductRepository.cs
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\interfaces\iproductrepository.cs
-++ITypeRepository.cs
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\interfaces\ityperepository.cs
-++Specification
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\specification\
-++BaseSpecification.cs
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\specification\basespecification.cs
-++ISpecification.cs
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\specification\ispecification.cs
-++ProductSpecParams.cs
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\specification\productspecparams.cs
-++ProductsWithTypesAndBrandsSpecification.cs
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\specification\productswithtypesandbrandsspecification.cs
-++ProductWithFiltersForCountSpecification.cs
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\specification\productwithfiltersforcountspecification.cs
-++Analizadores
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:analizadores
-i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:analizadores
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:analizadores
-++Marcos de trabajo
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:marcos de trabajo
-i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:marcos de trabajo
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:marcos de trabajo
-++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-++Microsoft.CodeAnalysis.NetAnalyzers
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-++System.Text.Json.SourceGeneration
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-++Microsoft.NETCore.App
-i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\microsoft.netcore.app
-i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\source\repos\proyecto\proyectshop\infraestructure\microsoft.netcore.app
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\microsoft.netcore.app
 ++Infraestructure
 i:{00000000-0000-0000-0000-000000000000}:Infraestructure
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\infraestructure\infraestructure.csproj
+++Dependencias
+i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:>410
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:>409
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:>612
 ++Data
 i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\source\repos\proyecto\proyectshop\infraestructure\data\
 ++Config
@@ -98,6 +39,14 @@ i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\source\repos\proyecto\pr
 i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\source\repos\proyecto\proyectshop\infraestructure\data\storecontextseed.cs
 ++TypeRepository.cs
 i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\source\repos\proyecto\proyectshop\infraestructure\data\typerepository.cs
+++Analizadores
+i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:analizadores
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:analizadores
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:analizadores
+++Marcos de trabajo
+i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:marcos de trabajo
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:marcos de trabajo
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:marcos de trabajo
 ++Paquetes
 i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:paquetes
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:paquetes
@@ -106,22 +55,77 @@ i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:proyectos
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:proyectos
 ++ProductConfiguration.cs
 i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\source\repos\proyecto\proyectshop\infraestructure\data\config\productconfiguration.cs
-++20220414105602_InitialCreate.cs
+++20220426225241_InitialCreate.cs
+i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\source\repos\proyecto\proyectshop\infraestructure\data\migrations\20220426225241_initialcreate.cs
 ++StoreContextModelSnapshot.cs
 i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\source\repos\proyecto\proyectshop\infraestructure\data\migrations\storecontextmodelsnapshot.cs
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
 ++Microsoft.EntityFrameworkCore.Analyzers
 i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.3\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.3\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
 ++Microsoft.Extensions.Logging.Generators
 i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++System.Text.Json.SourceGeneration
+i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.NETCore.App
+i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\source\repos\proyecto\proyectshop\infraestructure\microsoft.netcore.app
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\microsoft.netcore.app
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\microsoft.netcore.app
 ++Microsoft.EntityFrameworkCore.Sqlite (6.0.3)
-i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:>627
-++20220414105602_InitialCreate.Designer.cs
+i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:>646
+++StackExchange.Redis (2.5.61)
+i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:>705
+++Core
+i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\source\repos\proyecto\proyectshop\core\bin\debug\net6.0\core.dll
+i:{00000000-0000-0000-0000-000000000000}:Core
+++20220426225241_InitialCreate.Designer.cs
+i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\source\repos\proyecto\proyectshop\infraestructure\data\migrations\20220426225241_initialcreate.designer.cs
+++Entities
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\entities\
+++Interfaces
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\interfaces\
+++Specification
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\specification\
+++BaseEntity.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\entities\baseentity.cs
+++Product.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\entities\product.cs
+++ProductBrand.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\entities\productbrand.cs
+++ProductType.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\entities\producttype.cs
+++IBrandRepository.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\interfaces\ibrandrepository.cs
+++IGenericRepository.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\interfaces\igenericrepository.cs
+++IProductRepository.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\interfaces\iproductrepository.cs
+++ITypeRepository.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\interfaces\ityperepository.cs
+++BaseSpecification.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\specification\basespecification.cs
+++ISpecification.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\specification\ispecification.cs
+++ProductSpecParams.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\specification\productspecparams.cs
+++ProductsWithTypesAndBrandsSpecification.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\specification\productswithtypesandbrandsspecification.cs
+++ProductWithFiltersForCountSpecification.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\specification\productwithfiltersforcountspecification.cs
 ++API
 i:{00000000-0000-0000-0000-000000000000}:API
 ++Connected Services 
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:>603
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:>613
 ++Properties
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\properties\
 ++wwwroot
@@ -138,22 +142,10 @@ i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\pr
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\controllers\productscontroller.cs
 ++Dtos
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\dtos\
-++ProductToReturnDto.cs
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\dtos\producttoreturndto.cs
 ++Errors
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\errors\
-++ApiException.cs
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\errors\apiexception.cs
-++ApiResponse.cs
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\errors\apiresponse.cs
-++ApiValidationErrorResponse.cs
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\errors\apivalidationerrorresponse.cs
 ++Extensions
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\extensions\
-++ApplicationServicesExtensions.cs
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\extensions\applicationservicesextensions.cs
-++SwaggerServiceExtensions.cs
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\extensions\swaggerserviceextensions.cs
 ++Helpers
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\helpers\
 ++MappingProfiles.cs
@@ -164,8 +156,6 @@ i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\pr
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\helpers\producturlresolver.cs
 ++Middleware
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\middleware\
-++ExceptionMiddleware.cs
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\middleware\exceptionmiddleware.cs
 ++appsettings.json
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\appsettings.json
 ++Program.cs
@@ -173,17 +163,33 @@ i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\pr
 ++proyectshop.db
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\proyectshop.db
 ++proyectshop.db-shm
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\proyectshop.db-shm
 ++proyectshop.db-wal
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\proyectshop.db-wal
 ++Startup.cs
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\startup.cs
 ++No se detectaron dependencias de servicio
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:>604
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:>614
 ++launchSettings.json
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\properties\launchsettings.json
 ++serviceDependencies.json
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\properties\servicedependencies.json
 ++images
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\
+++ProductToReturnDto.cs
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\dtos\producttoreturndto.cs
+++ApiException.cs
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\errors\apiexception.cs
+++ApiResponse.cs
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\errors\apiresponse.cs
+++ApiValidationErrorResponse.cs
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\errors\apivalidationerrorresponse.cs
+++ApplicationServicesExtensions.cs
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\extensions\applicationservicesextensions.cs
+++SwaggerServiceExtensions.cs
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\extensions\swaggerserviceextensions.cs
+++ExceptionMiddleware.cs
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\middleware\exceptionmiddleware.cs
 ++appsettings.Development.json
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\appsettings.development.json
 ++Microsoft.AspNetCore.Analyzers
@@ -203,78 +209,60 @@ i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\program files\dotnet\sdk\6.0.201\sdk
 ++Microsoft.AspNetCore.App
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\microsoft.aspnetcore.app
 ++AutoMapper.Extensions.Microsoft.DependencyInjection (11.0.0)
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:>615
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:>625
 ++Microsoft.ApplicationInsights.AspNetCore (2.20.0)
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:>618
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:>628
 ++Microsoft.EntityFrameworkCore.Design (6.0.3)
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:>616
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:>626
 ++Swashbuckle.AspNetCore (6.2.3)
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:>617
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:>627
 ++serviceDependencies.local.json
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\properties\servicedependencies.local.json
 ++products
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\
-++boot-ang1.png
-++boot-ang2.png
-++boot-core1.png
-++boot-core2.png
-++boot-redis1.png
-++glove-code1.png
-++glove-code2.png
-++glove-react1.png
-++glove-react2.png
-++hat-core1.png
-++hat-react1.png
-++hat-react2.png
-++sb-ang1.png
-++sb-ang2.png
-++sb-core1.png
-++sb-core2.png
-++sb-react1.png
-++sb-ts1.png
-++es-galaxy-s21-ultra-5g-g988-sm-g998bzkgeub-thumb-368961195.png
-++Samsung_S21.png
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\samsung_s21.png
-++Samsung_ZFlip.png
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\samsung_zflip.png
+++Huawei_Freebuds_Pro.png
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\huawei_freebuds_pro.png
+++Huawei_freebuds-lipstick-red.png
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\huawei_freebuds-lipstick-red.png
+++Huawei_Nova_9_SE_Phone_Case.png
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\huawei_nova_9_se_phone_case.png
+++Huawei_P50Pro.png
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\huawei_p50pro.png
+++Huawei_P50ProCase.png
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\huawei_p50procase.png
+++Lg_Q60_PhoneCase.png
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\lg_q60_phonecase.png
+++LG_Velvet_PhoneCase.png
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\lg_velvet_phonecase.png
+++Nokia_18WWallChargerEU.png
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\nokia_18wwallchargereu.png
+++Nokia_Clarity_EardBuds.png
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\nokia_clarity_eardbuds.png
+++Nokia_Fast_Wall_Charger_18W_TypeC.png
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\nokia_fast_wall_charger_18w_typec.png
 ++Nokia_G21.png
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\nokia_g21.png
 ++Nokia_XR20.png
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\nokia_xr20.png
-++Huawei_P50Pro.png
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\huawei_p50pro.png
-++Xiaomi_12Pro.png
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\xiaomi_12pro.png
-++Nokia_Clarity_EardBuds.png
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\nokia_clarity_eardbuds.png
-++Huawei_Freebuds_Pro.png.crdownload
-++Huawei_Freebuds_Pro.png
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\huawei_freebuds_pro.png
-++Huawei_Freebuds_Lipstick.jpg
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\huawei_freebuds_lipstick.jpg
-++LG_Velvet_PhoneCase.png
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\lg_velvet_phonecase.png
-++Huawei_Freebuds_Lipstick.png
-++Lg_Q60_PhoneCase.png
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\lg_q60_phonecase.png
-++Huawei_P50ProCase.png
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\huawei_p50procase.png
-++Huawei _Nova_9_SE_Phone_Case.png
-++Xiaomi_Mi_65W_Fast_Charger.png
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\xiaomi_mi_65w_fast_charger.png
-++Nokia_Fast_Wall_Charger_18W.png
-++Nokia_8W_Wall_ChargerEU.png
 ++Samsung_Adaptive_FastCharging_WallCharger.png
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\samsung_adaptive_fastcharging_wallcharger.png
+++Samsung_S21.png
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\samsung_s21.png
 ++Samsung_WirelessCharger_TrioWhite.png
 i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\samsung_wirelesscharger_triowhite.png
-++Nokia_18WWallChargerEU.png
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\nokia_18wwallchargereu.png
-++Huawei_Nova_9_SE_Phone_Case.png
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\huawei_nova_9_se_phone_case.png
-++Nokia_Fast_Wall_Charger_18W_TypeC.png
-i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\nokia_fast_wall_charger_18w_typec.png
-++20220426225241_InitialCreate.cs
-i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\source\repos\proyecto\proyectshop\infraestructure\data\migrations\20220426225241_initialcreate.cs
-++20220426225241_InitialCreate.Designer.cs
-i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\source\repos\proyecto\proyectshop\infraestructure\data\migrations\20220426225241_initialcreate.designer.cs
+++Samsung_ZFlip.png
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\samsung_zflip.png
+++Xiaomi_12Pro.png
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\xiaomi_12pro.png
+++Xiaomi_Mi_65W_Fast_Charger.png
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\wwwroot\images\products\xiaomi_mi_65w_fast_charger.png
+++CustomerBasket.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\entities\customerbasket.cs
+++BasketItem.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\entities\basketitem.cs
+++IBasketRepository.cs
+i:{cd58d3c9-a02c-4865-a953-8c54ccdb194a}:c:\users\jesus\source\repos\proyecto\proyectshop\core\interfaces\ibasketrepository.cs
+++BasketRepository.cs
+i:{d8157082-f6fb-4387-93f1-a39fb6a69554}:c:\users\jesus\source\repos\proyecto\proyectshop\infraestructure\data\basketrepository.cs
+++BasketController.cs
+i:{22aa417c-d394-4d9e-babf-c3308de6ed4e}:c:\users\jesus\source\repos\proyecto\proyectshop\api\controllers\basketcontroller.cs

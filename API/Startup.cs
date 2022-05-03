@@ -4,8 +4,7 @@ using API.Middleware;
 using Infraestructure.Data;
 
 using Microsoft.EntityFrameworkCore;
-
-
+using StackExchange.Redis;
 
 namespace API
 {
@@ -26,6 +25,15 @@ namespace API
             services.AddAutoMapper(typeof(MappingProfiles));
             services.AddControllers();
             services.AddDbContext<StoreContext>(c => c.UseSqlite(_config.GetConnectionString("DefaultConnection")));
+
+            //redis para el carrito singleton para que exista mientras este iniciada la aplicacion, si se apaga la aplicacion no pasa nada porque hace snapshoots cada minuto bueno
+            //se perderia lo de cada minuto obviamente
+
+            services.AddSingleton<IConnectionMultiplexer>(c => {
+                var configuration = ConfigurationOptions.Parse(_config
+                    .GetConnectionString("Redis"), true);
+                return ConnectionMultiplexer.Connect(configuration);
+            });
 
             services.AddApplicationServices();
             services.AddSwaggerDocumentation();
