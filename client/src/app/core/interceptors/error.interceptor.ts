@@ -5,7 +5,7 @@ import {
   HttpEvent,
   HttpInterceptor
 } from '@angular/common/http';
-import { catchError, Observable, throwError } from 'rxjs';
+import { catchError, delay, Observable, throwError } from 'rxjs';
 import { NavigationExtras, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
@@ -38,7 +38,8 @@ export class ErrorInterceptor implements HttpInterceptor {
           }
         }
 
-        return throwError(error);
+       // return throwError(() => new Error (error));
+       return throwError(error);
       })
     );
   }

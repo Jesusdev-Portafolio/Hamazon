@@ -11,7 +11,7 @@ import { ShopService } from './shop.service';
   styleUrls: ['./shop.component.scss']
 })
 export class ShopComponent implements OnInit {
-  @ViewChild('search', {static: true}) searchTerm: ElementRef;
+  @ViewChild('search', {static: false}) searchTerm: ElementRef;//antes estaba a true pero se cargaba antes del loading por eso lo cambio a false y ya se carga despues
   products: IProduct[];
   brands: IBrand[];
   types: IType[];
@@ -85,6 +85,7 @@ export class ShopComponent implements OnInit {
    onSearch(){
      this.shopParams.search = this.searchTerm.nativeElement.value;
     this.shopParams.pageNumber = 1;
+    this.shopParams.typeId = 0; // no lo se rick creo que esta bien si no lo borro y queda como esta por defecto en 1
      this.getProducts();
    }
 
