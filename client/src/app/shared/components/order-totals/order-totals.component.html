@@ -1,0 +1,22 @@
+<div class="bg-light px-4 py-3 text-uppercase font-weight-bold">
+    Resumen del Pedido
+</div>
+<div class="p-4">
+    <p class="font-italic mb-4">Gastos de Envio seran añadidos dependiendo de la eleccion que elijas</p>
+    <ul class="list-untyled mb-4" *ngIf="(basketTotals$ | async)">
+
+        <li class="d-flex justify-content-between py-3 border-bottom">
+            <strong class="text-muted">SubTotal</strong>
+            <strong>{{(basketTotals$ | async).subtotal | currency:'EUR':'symbol'}}</strong>
+        </li>
+        <li class="d-flex justify-content-between py-3 border-bottom">
+            <strong class="text-muted">Tipos de Envio</strong>
+            <strong>{{(basketTotals$ | async).shipping | currency:'EUR':'symbol'}}</strong>
+        </li>
+        <li class="d-flex justify-content-between py-3 border-bottom">
+            <strong class="text-muted">Total</strong>
+            <strong>{{(basketTotals$ | async).total | currency:'EUR':'symbol'}}</strong>
+        </li>
+
+    </ul>
+</div>
