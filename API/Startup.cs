@@ -2,7 +2,7 @@ using API.Extensions;
 using API.Helpers;
 using API.Middleware;
 using Infraestructure.Data;
-
+using Infraestructure.Identity;
 using Microsoft.EntityFrameworkCore;
 using StackExchange.Redis;
 
@@ -25,6 +25,10 @@ namespace API
             services.AddAutoMapper(typeof(MappingProfiles));
             services.AddControllers();
             services.AddDbContext<StoreContext>(c => c.UseSqlite(_config.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppIdentityDbContext>(c =>
+            {
+                c.UseSqlite(_config.GetConnectionString("IdentityConnection"));
+            });
 
             //redis para el carrito singleton para que exista mientras este iniciada la aplicacion, si se apaga la aplicacion no pasa nada porque hace snapshoots cada minuto bueno
             //se perderia lo de cada minuto obviamente
@@ -36,6 +40,7 @@ namespace API
             });
 
             services.AddApplicationServices();
+            services.AddIdentityServices(_config);
             services.AddSwaggerDocumentation();
             services.AddCors(opt =>
             {
@@ -62,6 +67,8 @@ namespace API
             app.UseStaticFiles();
 
             app.UseCors("CorsPolicy");
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

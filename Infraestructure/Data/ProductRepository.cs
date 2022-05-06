@@ -43,7 +43,7 @@ namespace Infraestructure.Data
                 {
                     products = products.Where(p => p.Name.ToLower().Contains(search.ToLower()));
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return null;
                 }
