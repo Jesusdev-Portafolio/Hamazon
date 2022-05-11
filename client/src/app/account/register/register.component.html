@@ -1,0 +1,23 @@
+<!---Esto es de boostrap perop esta bien porque ya voy corto de tiempo!!-->
+<div class="d-flex justify-content-center mt-5">
+    <div class="col-3">
+        <form [formGroup]="registerForm"(ngSubmit)="onSubmit()">
+            <div class="text-center mb-4">
+              <h1 class="h3 mb-3 font-weight-normal">Registrarse</h1>
+            </div>
+                    
+       <app-text-input formControlName="displayName" [label]="'Nombre'"></app-text-input>
+       <app-text-input formControlName="email" [label]="'Direccion de Correo'"></app-text-input>
+       <app-text-input formControlName="password" [label]="'Contraseña'" [type]="'password'"></app-text-input>
+
+       <ul class="text-danger list-unstyled" *ngIf="errors">
+            <li *ngFor="let error of errors">
+                {{error }}
+            </li>
+       </ul>
+
+            <button  class="btn btn-lg btn-primary btn-block" type="submit">Registrarse</button>
+            <p class="mt-5 mb-3 text-muted text-center">© Hamazon - Jesus Noguera</p>
+          </form>
+    </div>
+</div>

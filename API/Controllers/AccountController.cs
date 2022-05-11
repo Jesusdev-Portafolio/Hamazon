@@ -41,7 +41,7 @@ namespace API.Controllers
             };
         }
 
-        [Authorize]
+      
         [HttpGet("emailexists")]
         public async Task<ActionResult<bool>>CheckEmailExistAsync([FromQuery] string email)
         {
