@@ -1,10 +1,9 @@
-<div class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm fixed-top">
+<!-- <div class=" nav-custom d-flex flex-column flex-md-row align-items-center justify-content-between p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm fixed-top">
     <img class="logo" src="/assets/images/logo/Hamazon_logo.svg.png" style="max-height:65px;" alt="AquiValogo" [routerLink]="['/']" >
     <nav class="my-2 my-md-0 mr-md-0 text-uppercase main-nav" style="font-size: larger;">
-      <a class="p-2" [routerLink]="['/']" routerLinkActive="active" 
-        [routerLinkActiveOptions] = "{exact:  true}" >Home</a>
-      <a class="p-2" [routerLink]="['/shop']" routerLinkActive="active">Shop</a>
-      <a class="p-2" routerLink="/test-error" routerLinkActive ='active'>Errors</a>
+      <a class="p-2" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions] = "{exact:  true}" >Inicio</a>
+      <a class="p-2" [routerLink]="['/shop']" routerLinkActive="active">Tienda</a>
+      <a class="p-2" routerLink="/test-error" routerLinkActive ='active'>Contacto</a> 
     </nav>
     <div class="d-flex align-items-center">
         <a routerLink="/basket" class="position-relative"> 
@@ -31,9 +30,58 @@
             <a (click)="logout()" class="dropdown-item d-flex align-items-center py-2">
               <i class="fa fa-sign-out mr-3"></i> Salir
             </a>
-
            </div>
           </div>
         </ng-container>   
     </div>
-</div>
+</div> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top my-nav">
+  <img class="logo" src="/assets/images/logo/Hamazon_logo.svg.png"  alt="logo" [routerLink]="['/']" >
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mt-2 mr-auto text-uppercase main-nav" style="font-size: larger;">
+      <li class="nav-item">
+        <a class="p-2" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions] = "{exact:  true}" >Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="p-2" [routerLink]="['/shop']" routerLinkActive="active">Tienda</a>
+      </li>
+      <li class="nav-item">
+        <a class="p-2" routerLink="/test-error" routerLinkActive ='active'>Contacto</a> 
+      </li>
+    </ul>
+     <a routerLink="/basket" class="position-relative"> 
+          <i class="fa fa-shopping-cart fa-4x mr-4 carrito"></i>
+          <div *ngIf="(basket$ | async)" class="cart-no">{{(basket$ | async).items.length}}</div>
+      </a>
+    <div class="d-flex align-items-center login-info-user">
+      <ng-container *ngIf="(currentUser$ | async) === null">
+        <a routerLink="account/login" class="btn btn-warning mr-2 btn-width btn-ingresar btn-nav">Ingresar</a>
+        <a routerLink="account/register" class="btn btn-warning mr-2 btn-width btn-nav">Registrarse</a>
+      </ng-container> 
+      <ng-container *ngIf="currentUser$ | async">
+        <div class="dropdown mr-5" dropdown>
+          <a class="dropdown-toggle" style="cursor: pointer;" dropdownToggle>
+            <strong class="user-name">{{(currentUser$ | async).displayName}}</strong>
+         </a>
+         <div class="dropdown-menu dropdown-menu-right" style="cursor:pointer;" *dropdownMenu>
+          <a routerLink="/basket" class="dropdown-item d-flex align-items-center py-2">
+            <i class="fa fa-shopping-cart mr-3"></i> Ver Carrito
+          </a>
+          <a routerLink="/user-info"class="dropdown-item d-flex align-items-center py-2">
+            <i class="fa fa-history mr-3"></i> Ver Pedido
+          </a>
+          <div class="dropdown-divider"></div>
+          <a (click)="logout()" class="dropdown-item d-flex align-items-center py-2">
+            <i class="fa fa-sign-out mr-3"></i> Salir
+          </a>
+         </div>
+        </div>
+      </ng-container>   
+  </div>
+  </div>
+</nav>

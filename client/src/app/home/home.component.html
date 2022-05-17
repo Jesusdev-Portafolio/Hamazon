@@ -1,17 +1,30 @@
-<carousel>
-    <slide>
-        <img src="assets/images/hero1.jpg" alt="priemra imagen" style="display:block; width: 100%;">
-    </slide>
-    <slide>
-        <img src="assets/images/hero2.jpg" alt="segunda imagen" style="display:block; width: 100%;">
-    </slide>
-    <slide>
-        <img src="assets/images/hero3.jpg" alt="tercera imagen" style="display:block; width: 100%;">
-    </slide>
-</carousel>
-
-<section class="featured">
-    <div class="d-flex justify-content-center pt-4">
-        <h1>Welcome to Hamazon!</h1>
-    </div>
-</section>
+<div class="main-carousel">
+    <carousel 
+    [isAnimated]="true"
+    [showIndicators]="false">
+        <slide>
+            <img   src="assets/images/main-img.jpeg" alt="main-img">
+            <div class="content main">
+                <h1 class="title">Hamaz<span>o</span>n</h1>
+                <h3><span>Tu tienda de Confianza</span></h3>
+                <a class="mt-2 btn btn-carousel text-uppercase" routerLink="/shop">Comprar Ahora</a>
+            </div>
+        </slide>
+        <slide>
+            <img class="blur-img"  src="assets/images/shiping.jpg" alt="Get-everywhere">
+            <div class="content info">
+                <h1 class="title">Sin Front<span>e</span>ras</h1>
+                <h3><span>Envíos a Nivel Mundial</span></h3>
+                <img class="logo-decorator"src="assets/images/hzon.png" alt="logo-img">
+            </div>
+        </slide>
+        <slide>
+            <img  class="blur-img" src="assets/images/join-us.webp" alt="join-us">
+            <div class="content join-us">
+                <h1>¡Regístr<span>a</span>te!</h1>
+                <h3><span>Descubre Nuestras Promociones</span></h3>
+                <a routerLink="account/register" class="mt-2 btn btn-carousel text-uppercase" href="#">Registrarse</a>
+            </div>
+        </slide>    
+    </carousel>
+</div>

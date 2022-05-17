@@ -1,15 +1,51 @@
+.my-nav{
+    padding: 10px;
+}
+
+.btn-nav{
+    color: white;
+    font-size: 110%;
+    border: 2px solid transparent;
+    padding: 3px 8px 3px 8px !important;
+    transition: .5s;
+
+    &:hover{
+        border: 2px solid orange;
+        background-color: white;
+        color: black;
+    }
+}
+
+
+.logo{
+    cursor:pointer;
+    max-height:65px;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+.user-name{
+    font-size: 25px;
+    margin-left: -1vw;
+}
+.carrito{
+    color: #1178db;
+}
 .cart-no{
     position: absolute;
     min-height: 25px;
     min-width: 25px;
     border-radius: 50%;
-    font-size: 1em;
-    background: blue;
+    font-size: 1.2em;
+    background: transparent;
     color: white;
     text-align: center;
-    top: -10px;
-    right: 35px;
+    top: 12px;
+    right: 37px;
 }
+
 
 a{
     text-decoration: none;
@@ -20,23 +56,53 @@ a{
     }
 }
 
-.logo{
-    cursor:pointer;
-
-    &:focus{
-        outline: none;
-    }
-}
-
 
 @media (max-width: 2560px){
     .main-nav{
-        margin-right: -2vw !important;
+        margin-left: 35vw !important;
     }
 }
 
 @media (max-width: 1280px){
     .main-nav{
-        margin-right: -10vw !important;
+        margin-left: 22vw !important;
     }
+}
+
+@media (max-width: 600px){
+    .main-nav{
+        margin-left: 2vw !important;
+        font-size: small;
+    }
+    .carrito{
+        margin-left: 3vw !important;
+        margin-top: 0vh !important;
+        margin-bottom: 2vh !important;
+    }
+    .login-info-user{
+        flex-direction: column !important;
+        margin-top: -155px;
+        margin-left: 130px;
+        margin-bottom: 80px;
+    }
+    .btn-width{
+        width: 120px;
+    }
+
+    .btn-ingresar{
+        margin-bottom: 2vh;
+    }
+
+    .cart-no{
+        top: -27px;
+    }
+ 
+}
+
+@media (max-width: 350px){
+   .logo{
+        width: 150px;
+        height: 50px;
+   }
+ 
 }
