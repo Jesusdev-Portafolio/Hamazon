@@ -1,7 +1,7 @@
 [
     {
         "Name": "Samsumg Galaxy s21 Ultra",
-        "Description": "The highest resolution photos and video on a smartphone, A blazing fast processor, First ever S Pen compatibility",
+        "Description": "La mayor resolución en fotos y videos en un SmartPhone, Un procesador veloz, Primero en Compatibilidad con S Pen.",
         "Price": 550.00,
         "PictureUrl": "images/products/Samsung_S21.png",
         "ProductTypeId": 1,
@@ -9,7 +9,7 @@
     },
     {
         "Name": "Samsung Galaxy Z Flip",
-        "Description": "Put it in your pocket, in your bag or in your finest jeans. Then take it out and open it to enjoy a full-screen 5G smartphone that folds to any angle you want.",
+        "Description": "Tenlo en tu bolsillo, en tu bolso o en tus mejores jeans. Luego sacalos y abrelo para disfrutar de un SmartPhone 5G full PantallaG que se pliega a cualquier angulo que quieras.",
         "Price": 349.99,
         "PictureUrl": "images/products/Samsung_ZFlip.png",
         "ProductTypeId": 1,
@@ -17,7 +17,7 @@
     },
     {
         "Name": "Nokia G21",
-        "Description": "3 days of battery life, twice as many security updates as the competition, and 2 years of software updates",
+        "Description": "3 Dias de duración de batería, mas del doble de actualizaciones de seguridad que la competencia, y 2 años de actualizaciones de software.",
         "Price": 199.00,
         "PictureUrl": "images/products/Nokia_G21.png",
         "ProductTypeId": 1,
@@ -25,7 +25,7 @@
     },
     {
         "Name": "Nokia XR20",
-        "Description": "Designed for the long haul. Created to overcome the hardships of life with style.",
+        "Description": "Diseñado para el largo plazo. Creado para superar las dificultades de la vida con estilo.",
         "Price": 518.00,
         "PictureUrl": "images/products/Nokia_XR20.png",
         "ProductTypeId": 1,
@@ -33,7 +33,7 @@
     },
     {
         "Name": "Huawei P50 pro",
-        "Description": "Its geometric and simplified design makes the dual-array camera really stand out. You will dazzle with its two eyes wherever you go.",
+        "Description": "Su diseño geométrico y simplificado hace que la cámara de doble matriz realmente se destaque. Deslumbrarás con sus dos ojos allá donde vayas.",
         "Price": 1199.00,
         "PictureUrl": "images/products/Huawei_P50Pro.png",
         "ProductTypeId": 1,
@@ -41,7 +41,7 @@
     },
     {
         "Name": "Xiaomi 12 Pro",
-        "Description": "United Nations design majestic Smooth and elegant lines. Velvety and matte touch. Three bright colors.",
+        "Description": "Diseño majestuoso de las Naciones Unidas Líneas suaves y elegantes. Tacto aterciopelado y mate. Tres colores brillantes.",
         "Price": 999.99,
         "PictureUrl": "images/products/Xiaomi_12Pro.png",
         "ProductTypeId": 1,
@@ -49,7 +49,7 @@
     },
     {
         "Name": "Nokia Clarity Earbuds",
-        "Description": "On calls, you'll be heard clearly wherever you are thanks to the dual microphone with noise reduction.",
+        "Description": "En las llamadas, se te escuchará con claridad estés donde estés gracias al micrófono dual con reducción de ruido.",
         "Price": 69.99,
         "PictureUrl": "images/products/Nokia_Clarity_EardBuds.png",
         "ProductTypeId": 2,
@@ -57,7 +57,7 @@
     },
     {
         "Name": "Huawei Freebuds Pro",
-        "Description": "We find some of the best wireless headphones on the market and for a quality-gross price ratio",
+        "Description": "Encontramos algunos de los mejores auriculares inalámbricos del mercado y por una relación calidad-precio inmejorable.",
         "Price": 109.99,
         "PictureUrl": "images/products/Huawei_Freebuds_Pro.png",
         "ProductTypeId": 2,
@@ -65,79 +65,79 @@
     },
     {
         "Name": "Huawei Freebuds Lipstick",
-        "Description": "HUAWEI FreeBuds Lipstick offers a stunning change of look and sound with its ultra-chic design that sets a new trend, as well as its innovative features that allow you to enjoy a more select and superior audio experience.",
+        "Description": "HUAWEI FreeBuds Lipstick ofrece un sorprendente cambio de apariencia y sonido con su diseño ultra-chic que marca una nueva tendencia, así como sus características innovadoras que te permiten disfrutar de una experiencia de audio más selecta y superior.",
         "Price": 159.99,
         "PictureUrl": "images/products/freebuds-lipstick-red.png",
         "ProductTypeId": 2,
         "ProductBrandId": 4
     },
     {
-        "Name": "LG Velvet Phone Case",
-        "Description": "Guaranteed Protection for your Mobile",
+        "Name": "LG Velvet Protector Móvil",
+        "Description": "Protección Garantizada para tu Móvil.",
         "Price": 12.99,
         "PictureUrl": "images/products/LG_Velvet_PhoneCase.png",
         "ProductTypeId": 4,
         "ProductBrandId": 3
     },
     {
-        "Name": "Lg Q60 Phone Case",
-        "Description": "Guaranteed Protection for your Mobile",
+        "Name": "Lg Q60 Protector Móvil",
+        "Description": "Protección Garantizada para tu Móvil.",
         "Price": 12.99,
         "PictureUrl": "images/products/Lg_Q60_PhoneCase.png",
         "ProductTypeId": 4,
         "ProductBrandId": 3
     },
     {
-        "Name": "Huawei P50 Pro Phone Case",
-        "Description": "Guaranteed Protection for your Mobile",
+        "Name": "Huawei P50 Pro Protector Móvil",
+        "Description": "Protección Garantizada para tu Móvil.",
         "Price": 12.99,
         "PictureUrl": "images/products/Huawei_P50ProCase.png",
         "ProductTypeId": 4,
         "ProductBrandId": 4
     },
     {
-        "Name": "Huawei Nova 9 SE Phone Case",
-        "Description": "Guaranteed Protection for your Mobile",
+        "Name": "Huawei Nova 9 SE Protector Móvil",
+        "Description": "Protección Garantizada para tu Móvil.",
         "Price": 12.99,
         "PictureUrl": "images/products/Huawei_Nova_9_SE_Phone_Case.png",
         "ProductTypeId": 4,
         "ProductBrandId": 4
     },
     {
-        "Name": "Xiaomi Mi 65W Fast Charger",
-        "Description": "Fastest charging so you're always connected.",
+        "Name": "Xiaomi Mi 65W Fast Cargador",
+        "Description": "La carga más rápida para que siempre estes conectado.",
         "Price": 24.99,
         "PictureUrl": "images/products/Xiaomi_Mi_65W_Fast_Charger.png",
         "ProductTypeId": 3,
         "ProductBrandId": 6
     },
     {
-        "Name": "Nokia Fast Wall Charger 18W Tipo C",
-        "Description": "Fastest charging so you're always connected.",
+        "Name": "Nokia Fast Wall Cargador 18W Tipo C",
+        "Description": "La carga más rápida para que siempre estes conectado.",
         "Price": 24.99,
         "PictureUrl": "images/products/Nokia_Fast_Wall_Charger_18W_TypeC.png",
         "ProductTypeId": 3,
         "ProductBrandId": 2
     },
     {
-        "Name": "Nokia AD-18WE 18W Wall Charger EU",
-        "Description": "Fastest charging so you're always connected.",
+        "Name": "Nokia AD-18WE 18W Wall Cargador EU",
+        "Description": "La carga más rápida para que siempre estes conectado.",
         "Price": 59.99,
         "PictureUrl": "images/products/Nokia_18WWallChargerEU.png",
         "ProductTypeId": 3,
         "ProductBrandId": 2
     },
     {
-        "Name": "Samsung Adaptive Fast Charging Wall Charger",
-        "Description": "Fastest charging so you're always connected.",
+        "Name": "Samsung Adaptive Cargador Wall",
+        "Description": "La carga más rápida para que siempre estes conectado.",
         "Price": 59.99,
         "PictureUrl": "images/products/Samsung_Adaptive_FastCharging_WallCharger.png",
         "ProductTypeId": 3,
         "ProductBrandId": 1
     },
     {
-        "Name": "Samsung Wireless Charger Trio, White",
-        "Description": "Fastest charging so you're always connected.",
+        "Name": "Samsung Wireless Cargador Trio, White",
+        "Description": "La carga más rápida para que siempre estes conectado.",
         "Price": 99.99,
         "PictureUrl": "images/products/Samsung_WirelessCharger_TrioWhite.png",
         "ProductTypeId": 3,

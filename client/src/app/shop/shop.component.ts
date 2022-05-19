@@ -4,6 +4,8 @@ import { IBrand } from '../shared/models/productBrand';
 import { IType } from '../shared/models/productType';
 import { ShopParams } from '../shared/models/shopParams';
 import { ShopService } from './shop.service';
+import * as $ from 'jquery';
+
 
 @Component({
   selector: 'app-shop',
@@ -12,24 +14,25 @@ import { ShopService } from './shop.service';
 })
 export class ShopComponent implements OnInit {
   @ViewChild('search', {static: false}) searchTerm: ElementRef;//antes estaba a true pero se cargaba antes del loading por eso lo cambio a false y ya se carga despues
+  @ViewChild('searchMobile', {static: false}) searchTermMobile: ElementRef
   products: IProduct[];
   brands: IBrand[];
   types: IType[];
   shopParams = new ShopParams()
   totalItems: number;
   sortOptions = [
-    {name: 'Name', value: 'Name'},
-    {name: 'Price: Low to High', value: 'Price'}, // because in my API the default option is for Price ASC so no needed to explicit describe here
-    {name: 'Price: High to Low', value: 'PriceDesc'}
+    {name: 'Nombre', value: 'Name'},
+    {name: 'Precio: Mas Baratos Primero', value: 'Price'}, // because in my API the default option is for Price ASC so no needed to explicit describe here
+    {name: 'Precio: Mas Caros Primero', value: 'PriceDesc'}
   ];
 
   constructor(private shopService: ShopService) { }
 
   ngOnInit(): void {
+
    this.getProducts();
    this.getTypes();
    this.getBrands();
-  
   }
 
   getProducts () {
@@ -45,7 +48,7 @@ export class ShopComponent implements OnInit {
 
   getBrands () {
     this.shopService.getBrands().subscribe(response => {
-      this.brands = [{id: 0, name: 'All'}, ...response];
+      this.brands = [{id: 0, name: 'Todo'}, ...response];
     },error =>{
       console.log(error);
     });
@@ -53,7 +56,7 @@ export class ShopComponent implements OnInit {
 
   getTypes () {
     this.shopService.getTypes().subscribe(response => {
-      this.types = [{id: 0, name: 'All'}, ...response];
+      this.types = [{id: 0, name: 'Todo'}, ...response];
     },error => {
       console.log(error);
     });
@@ -90,9 +93,11 @@ export class ShopComponent implements OnInit {
    }
 
    onReset(){
+
+      $('.sort-reset').prop('selectedIndex', 0);
      this.searchTerm.nativeElement.value = '';
-     this.shopParams  = new ShopParams();
+     this.searchTermMobile.nativeElement.value = '';
+     this.shopParams = new ShopParams();
      this.getProducts();
    }
-
 }

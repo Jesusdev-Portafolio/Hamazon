@@ -74,6 +74,12 @@ img{
     height: 65px;
 }
 
+.footer{
+    margin-top: -5vh;
+    background-color: transparent;
+    color: white;
+}
+
 .btn-carousel{
     background-color:#1178db;
     color:white;
@@ -133,8 +139,10 @@ img{
         width: 200px;
         height: 45px;
     }
+    .footer{
+        margin-top: -8vh;
+    }
 }
-
 
 @media (max-width: 350px){
     .content h1{

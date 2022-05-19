@@ -1,18 +1,18 @@
 [
   {
     "Id": 1,
-    "Name": "Mobiles"
+    "Name": "Móviles"
   },
   {
     "Id": 2,
-    "Name": "HeadPhones"
+    "Name": "Cascos"
   },
   {
     "Id": 3,
-    "Name": "Chargers"
+    "Name": "Cargadores"
   },
   {
     "Id": 4,
-    "Name": "Cases"
+    "Name": "Protector Móvil"
   }
 ]
