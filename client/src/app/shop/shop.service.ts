@@ -6,6 +6,7 @@ import { IType } from '../shared/models/productType';
 import { map } from 'rxjs/operators';
 import { ShopParams } from '../shared/models/shopParams';
 import { IProduct } from '../shared/models/product';
+import * as $ from 'jquery';
 
 @Injectable({
   providedIn: 'root'
@@ -39,7 +40,7 @@ export class ShopService {
       }
 
       params = params.append('pageIndex' , shopParams.pageNumber.toString());
-      params = params.append('pageSize' , shopParams.pageSize.toString())
+      params = params.append('pageSize' , this.itemsPerPage().toString())
 
      
 
@@ -66,5 +67,9 @@ export class ShopService {
     return this.http.get<IType[]>(this.baseUrl + 'products/types');
   }
 
-
+   itemsPerPage(){
+       return screen.width > 1300 ? 8 : 6 ;
+    }
 }
+
+

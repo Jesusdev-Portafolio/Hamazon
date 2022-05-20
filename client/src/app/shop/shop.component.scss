@@ -22,6 +22,14 @@
     width: 20vw;
 }
 
+.custom-select{
+    border: 1px solid #666;
+}
+
+.form-control{
+    border: 1px solid #666;
+}
+
 ::ng-deepd .pagination .page-item .page-link {
     border-radius: 0 !important;
   }
@@ -40,6 +48,12 @@
     color:#2c3e50 !important;
     opacity: .95;
   }
+
+
+.list-group-item {
+    border: 1px solid rgba(0,0,0,.3);
+}
+
 
 @media (max-width: 750px){
     .centrado{

@@ -60,8 +60,8 @@
       </a>
     <div class="d-flex align-items-center login-info-user">
       <ng-container *ngIf="(currentUser$ | async) === null">
-        <a routerLink="account/login" class="btn btn-warning mr-2 btn-width btn-ingresar btn-nav">Ingresar</a>
-        <a routerLink="account/register" class="btn btn-warning mr-2 btn-width btn-nav">Registrarse</a>
+        <a routerLink="account/login" class="btn  mr-2 btn-width btn-ingresar btn-nav">Ingresar</a>
+        <a routerLink="account/register" class="btn mr-2 btn-width btn-nav">Registrarse</a>
       </ng-container> 
       <ng-container *ngIf="currentUser$ | async">
         <div class="dropdown mr-5" dropdown>

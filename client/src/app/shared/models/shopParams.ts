@@ -1,3 +1,4 @@
+
 export class ShopParams{
   brandId = 0; //default all
   typeId = 1; // default mobiles
