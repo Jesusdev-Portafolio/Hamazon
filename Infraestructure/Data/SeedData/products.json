@@ -72,7 +72,7 @@
         "ProductBrandId": 4
     },
     {
-        "Name": "LG Velvet Protector Móvil",
+        "Name": "LG Velvet Protector",
         "Description": "Protección Garantizada para tu Móvil.",
         "Price": 12.99,
         "PictureUrl": "images/products/LG_Velvet_PhoneCase.png",
@@ -80,7 +80,7 @@
         "ProductBrandId": 3
     },
     {
-        "Name": "Lg Q60 Protector Móvil",
+        "Name": "Lg Q60 Protector",
         "Description": "Protección Garantizada para tu Móvil.",
         "Price": 12.99,
         "PictureUrl": "images/products/Lg_Q60_PhoneCase.png",
@@ -88,7 +88,7 @@
         "ProductBrandId": 3
     },
     {
-        "Name": "Huawei P50 Pro Protector Móvil",
+        "Name": "Huawei P50 Pro Protector",
         "Description": "Protección Garantizada para tu Móvil.",
         "Price": 12.99,
         "PictureUrl": "images/products/Huawei_P50ProCase.png",
@@ -96,7 +96,7 @@
         "ProductBrandId": 4
     },
     {
-        "Name": "Huawei Nova 9 SE Protector Móvil",
+        "Name": "Huawei Nova 9 SE Protector",
         "Description": "Protección Garantizada para tu Móvil.",
         "Price": 12.99,
         "PictureUrl": "images/products/Huawei_Nova_9_SE_Phone_Case.png",
@@ -104,7 +104,7 @@
         "ProductBrandId": 4
     },
     {
-        "Name": "Xiaomi Mi 65W Fast Cargador",
+        "Name": "Xiaomi Mi Fast Cargador",
         "Description": "La carga más rápida para que siempre estes conectado.",
         "Price": 24.99,
         "PictureUrl": "images/products/Xiaomi_Mi_65W_Fast_Charger.png",
@@ -112,7 +112,7 @@
         "ProductBrandId": 6
     },
     {
-        "Name": "Nokia Fast Wall Cargador 18W Tipo C",
+        "Name": "Nokia Wall Cargador",
         "Description": "La carga más rápida para que siempre estes conectado.",
         "Price": 24.99,
         "PictureUrl": "images/products/Nokia_Fast_Wall_Charger_18W_TypeC.png",
@@ -120,7 +120,7 @@
         "ProductBrandId": 2
     },
     {
-        "Name": "Nokia AD-18WE 18W Wall Cargador EU",
+        "Name": "Nokia 18W Wall Cargador EU",
         "Description": "La carga más rápida para que siempre estes conectado.",
         "Price": 59.99,
         "PictureUrl": "images/products/Nokia_18WWallChargerEU.png",
@@ -128,7 +128,7 @@
         "ProductBrandId": 2
     },
     {
-        "Name": "Samsung Adaptive Cargador Wall",
+        "Name": "Samsung Cargador Wall",
         "Description": "La carga más rápida para que siempre estes conectado.",
         "Price": 59.99,
         "PictureUrl": "images/products/Samsung_Adaptive_FastCharging_WallCharger.png",
@@ -136,7 +136,7 @@
         "ProductBrandId": 1
     },
     {
-        "Name": "Samsung Wireless Cargador Trio, White",
+        "Name": "Samsung Cargador Trio",
         "Description": "La carga más rápida para que siempre estes conectado.",
         "Price": 99.99,
         "PictureUrl": "images/products/Samsung_WirelessCharger_TrioWhite.png",
