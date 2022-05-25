@@ -1,29 +1,29 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top my-nav">
   <img class="logo" src="/assets/images/logo/Hamazon_logo.svg.png"  alt="logo" [routerLink]="['/']" >
-  <button class="navbar-toggler boton-responsive-nav" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler boton-responsive-nav boton-nav-movil" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mt-2 mr-auto text-uppercase main-nav" style="font-size: larger;">
-      <li class="nav-item">
-        <a class="p-2" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions] = "{exact:  true}" >Inicio</a>
+      <li class="nav-item" >
+        <a data-toggle="collapse" data-target=".navbar-collapse.show" class="p-2" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions] = "{exact:  true}" >Inicio</a>
       </li>
       <li class="nav-item">
-        <a class="p-2" [routerLink]="['/tienda']" routerLinkActive="active">Tienda</a>
+        <a data-toggle="collapse" data-target=".navbar-collapse.show" class="p-2" [routerLink]="['/tienda']" routerLinkActive="active">Tienda</a>
       </li>
       <li class="nav-item">
-        <a class="p-2" routerLink="/test-error" routerLinkActive ='active'>Contacto</a> 
+        <a data-toggle="collapse" data-target=".navbar-collapse.show" class="p-2" routerLink="/test-error" routerLinkActive ='active'>Contacto</a> 
       </li>
     </ul>
-     <a routerLink="/basket" class="position-relative"> 
+     <a data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/basket" class="position-relative"> 
           <i class="fa fa-shopping-cart fa-4x mr-4 carrito"></i>
           <div *ngIf="(basket$ | async)" class="cart-no">{{(basket$ | async).items.length}}</div>
       </a>
     <div class="d-flex align-items-center login-info-user">
       <ng-container *ngIf="(currentUser$ | async) === null">
-        <a routerLink="cuenta/Ingresar" class="btn  mr-2 btn-width btn-ingresar btn-nav">Ingresar</a>
-        <a routerLink="cuenta/Registrarse" class="btn mr-2 btn-width btn-nav">Registrarse</a>
+        <a  data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="cuenta/Ingresar" class="btn  mr-2 btn-width btn-ingresar btn-nav">Ingresar</a>
+        <a data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="cuenta/Registrarse" class="btn mr-2 btn-width btn-nav">Registrarse</a>
       </ng-container> 
       <ng-container *ngIf="currentUser$ | async">
         <div class="dropdown mr-5" dropdown>
@@ -31,14 +31,14 @@
             <strong class="user-name">{{(currentUser$ | async).displayName}}</strong>
          </a>
          <div class="dropdown-menu dropdown-menu-right" style="cursor:pointer;" *dropdownMenu>
-          <a routerLink="/basket" class="dropdown-item d-flex align-items-center py-2">
+          <a data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/basket" class="dropdown-item d-flex align-items-center py-2">
             <i class="fa fa-shopping-cart mr-3"></i> Ver Carrito
           </a>
-          <a routerLink="/checkout" class="dropdown-item d-flex align-items-center py-2">
+          <a data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/checkout" class="dropdown-item d-flex align-items-center py-2">
             <i class="fa fa-history mr-3"></i> Ver Pedido
           </a>
           <div class="dropdown-divider"></div>
-          <a (click)="logout()" class="dropdown-item d-flex align-items-center py-2">
+          <a data-toggle="collapse" data-target=".navbar-collapse.show" (click)="logout()" class="dropdown-item d-flex align-items-center py-2">
             <i class="fa fa-sign-out mr-3"></i> Salir
           </a>
          </div>

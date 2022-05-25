@@ -1,8 +1,7 @@
-<div class="bg-light px-4 py-3 text-uppercase font-weight-bold">
+<div class="bg-light px-4 py-3 text-uppercase font-weight-bold text-center">
     Resumen del Pedido
 </div>
 <div class="p-4">
-    <p class="font-italic mb-4">Gastos de Envio serán añadidos dependiendo de la opción que elijas</p>
     <ul class="list-untyled mb-4" *ngIf="(basketTotals$ | async)">
 
         <li class="d-flex justify-content-between py-3 border-bottom">
@@ -10,13 +9,14 @@
             <strong>{{(basketTotals$ | async).subtotal | currency:'EUR':'symbol'}}</strong>
         </li>
         <li class="d-flex justify-content-between py-3 border-bottom">
-            <strong class="text-muted">Tipos de Envio</strong>
-            <strong>{{(basketTotals$ | async).shipping | currency:'EUR':'symbol'}}</strong>
+            <strong class="text-muted">Comisión al Desarrollador (5%) <span style="color: red;">*</span></strong>
+            <strong>{{((basketTotals$ | async).total * 0.05) | currency:'EUR':'symbol'}}</strong>
         </li>
-        <li class="d-flex justify-content-between py-3 border-bottom">
+        <li class="d-flex justify-content-between py-3 border-bottom mb-1">
             <strong class="text-muted">Total</strong>
-            <strong>{{(basketTotals$ | async).total | currency:'EUR':'symbol'}}</strong>
+            <strong>{{((basketTotals$ | async).total * 105) | currency:'EUR':'symbol'}}</strong>
         </li>
+        <p> <span style="color:red;">*</span><i style="opacity:.4;border-bottom:1px solid red">Si te Quejas lo subo a 10%</i></p>
 
     </ul>
 </div>

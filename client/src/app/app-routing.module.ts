@@ -17,8 +17,6 @@ const routes: Routes = [
   {path: 'checkout',canActivate:[AuthGuard], loadChildren: () => import('./checkout/checkout.module').then(mod => mod.CheckoutModule), data: {breadcrumb: 'Pagar'}},
   {path: 'cuenta', loadChildren: () => import('./account/account.module').then(mod => mod.AccountModule), data: {breadcrumb: {skip:true}}},
   {path: '**', redirectTo: 'not-found', pathMatch: 'full'}
-
-
 ];
 
 @NgModule({

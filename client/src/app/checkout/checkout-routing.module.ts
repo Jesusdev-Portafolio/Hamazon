@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CheckoutComponent } from './checkout.component';
 
 const routes:Routes = [
-  {path: 'kk', component: CheckoutComponent}
+  {path: '', component: CheckoutComponent}
 ]
 
 @NgModule({

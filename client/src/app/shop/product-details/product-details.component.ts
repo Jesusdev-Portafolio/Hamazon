@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { BasketService } from 'src/app/basket/basket.service';
 import { IProduct } from 'src/app/shared/models/product';
 import { BreadcrumbService } from 'xng-breadcrumb';
@@ -15,7 +16,7 @@ export class ProductDetailsComponent implements OnInit {
   product: IProduct;
   quantity = 1;
 
-  constructor(private shopService: ShopService, private activateRoute: ActivatedRoute, private bcService: BreadcrumbService, private basketService:BasketService ) {
+  constructor(private shopService: ShopService, private activateRoute: ActivatedRoute, private bcService: BreadcrumbService, private basketService:BasketService, private toastr: ToastrService ) {
     this.bcService.set('@productDetails', ' ');
    }
 
@@ -25,6 +26,13 @@ export class ProductDetailsComponent implements OnInit {
 
     addItemToBasket(){
       this.basketService.addItemToBasket(this.product, this.quantity);
+      this.toastr.success("Añadido Correctamente", "", {
+        timeOut:1500,
+        positionClass: 'toast-center-center' , 
+        closeButton: true
+     
+     });
+
     }
 
     incrementQuantity(){

@@ -1,8 +1,10 @@
 <div class="container mt-3">
 
     <div *ngIf="(basket$ | async) === null">
-        <p>There are no items in your basket</p>
-    
+        <div class="no-basket">
+            <p class="nobasket-message">Tu Carrito Esta Vacío</p>
+            <p class="link-shop"> <a class="btn btn-primary my-btn"routerLink="/tienda">¡Empieza a Comprar!</a></p>
+        </div>
     </div>
     
     <div *ngIf="(basket$|async)">
@@ -66,16 +68,18 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-6 offset-6">
+                    <div class="col-6 offset-3">
                         <app-order-totals></app-order-totals>
-                        <a routerLink="/checkout" class="btn btn-outline-primary py-2 btn-block">
-                            Proceed to Chekout
+                        <a routerLink="/checkout" class="btn btn-primary py-2 btn-block">
+                            Comprar
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+    <div class="footer-basket">
+        <app-footer></app-footer>
+    </div>
 </div>
 

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { CoreModule } from '../core/core.module';
 
 const routes :Routes = [
   {path:'Ingresar', component:LoginComponent },
@@ -13,7 +14,8 @@ const routes :Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    CoreModule
   ],exports:[RouterModule]
 })
 export class AccountRoutingModule { }

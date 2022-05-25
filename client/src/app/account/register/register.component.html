@@ -1,9 +1,9 @@
 <!---Esto es de boostrap perop esta bien porque ya voy corto de tiempo!!-->
-<div class="d-flex justify-content-center mt-5">
-    <div class="col-3">
+<div class="d-flex justify-content-center main-reg-log">
+    <div class="col-responsive">
         <form [formGroup]="registerForm"(ngSubmit)="onSubmit()">
             <div class="text-center mb-4">
-              <h1 class="h3 mb-3 font-weight-normal">Registrarse</h1>
+              <h1 class="mb-3 font-weight-normal">Registrarse</h1>
             </div>
                     
        <app-text-input formControlName="displayName" [label]="'Nombre'"></app-text-input>
@@ -15,9 +15,12 @@
                 {{error }}
             </li>
        </ul>
-
-            <button  class="btn btn-lg btn-primary btn-block" type="submit">Registrarse</button>
-            <p class="mt-5 mb-3 text-muted text-center">© Hamazon - Jesus Noguera</p>
+            <button  class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="registerForm.invalid">Registrarse</button>
           </form>
+          <p class="mt-2 d-flex justify-content-center" style="color:rgba(100,100,100,.7) ;">¿Ya Tienes Cuenta? Ingresa &nbsp; <a class="link-reg-log" routerLink="/cuenta/Ingresar"> <strong>aqui</strong>  </a></p>
     </div>
 </div>
+<div class="footer-login">
+  <app-footer></app-footer>
+</div>
+

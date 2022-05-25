@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ShopRoutingModule } from './shop-routing.module';
 import { CoreModule } from '../core/core.module';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -16,7 +17,11 @@ import { CoreModule } from '../core/core.module';
     CommonModule,
     SharedModule,
     ShopRoutingModule,
-    CoreModule
+    CoreModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-top-right',
+      preventDuplicates: true
+    }),
   ]
 })
 export class ShopModule { }
