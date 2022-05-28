@@ -6,6 +6,7 @@ import { IProduct } from 'src/app/shared/models/product';
 import { BreadcrumbService } from 'xng-breadcrumb';
 import { ShopComponent } from '../shop.component';
 import { ShopService } from '../shop.service';
+import { timer} from 'rxjs'
 
 @Component({
   selector: 'app-product-details',
@@ -26,12 +27,15 @@ export class ProductDetailsComponent implements OnInit {
 
     addItemToBasket(){
       this.basketService.addItemToBasket(this.product, this.quantity);
-      this.toastr.success("Añadido Correctamente", "", {
-        timeOut:1500,
-        positionClass: 'toast-center-center' , 
-        closeButton: true
-     
-     });
+      const timer$ = timer(1100);
+      timer$.subscribe((n) =>{
+        this.toastr.success("Añadido Correctamente", "", {
+          timeOut:1500,
+          positionClass: 'toast-center-center' , 
+          closeButton: true,
+       });
+      })
+      
 
     }
 

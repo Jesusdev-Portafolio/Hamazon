@@ -75,11 +75,17 @@ a{
     .main-nav{
         margin-left: 35vw !important;
     }
+    .user-options{
+        margin-left: 15px;
+    }
 }
 
 @media (max-width: 1280px){
     .main-nav{
         margin-left: 22vw !important;
+    }
+    .user-options{
+        margin-top: 0px;
     }
 }
 @media (max-width: 992px){
@@ -92,11 +98,12 @@ a{
         margin-top: 0vh !important;
         margin-bottom: 2vh !important;
     }
-    .login-info-user{
+    .login-register-btn{
+        display: flex;
         flex-direction: column !important;
-        margin-top: -155px;
-        margin-left: 130px;
-        margin-bottom: 80px;
+        margin-top: -170px;
+        margin-left: 170px;
+        margin-bottom: 70px;
     }
     .btn-width{
         width: 120px;
@@ -107,7 +114,14 @@ a{
     }
 
     .cart-no{
+        
         top: -27px;
+    }
+
+    .user-options{
+        margin-top: -230px;
+        margin-left: 180px;
+        margin-bottom: 70px;
     }
  
 }
@@ -118,15 +132,15 @@ a{
         font-size: small;
     }
     .carrito{
-        margin-left: 3vw !important;
+        margin-left: 4vw !important;
         margin-top: 0vh !important;
         margin-bottom: 2vh !important;
     }
-    .login-info-user{
+    .login-register-btn{
         flex-direction: column !important;
-        margin-top: -155px;
-        margin-left: 130px;
-        margin-bottom: 80px;
+        margin-top: -170px;
+        margin-left: 170px;
+        margin-bottom: 70px;
     }
     .btn-width{
         width: 120px;
@@ -137,7 +151,13 @@ a{
     }
 
     .cart-no{
-        top: -27px;
+        top: -28px;
+    }
+
+    .user-options{
+        margin-top: -230px;
+        margin-left: 180px;
+        margin-bottom: 70px;
     }
  
 }

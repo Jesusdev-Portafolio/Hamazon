@@ -1,5 +1,9 @@
 
 @media (max-width: 2560px){
+    .col-responsive{
+        width: 25vw;
+    }
+
     .main-reg-log{
         margin-top: 15vh;
      }   
@@ -33,7 +37,11 @@
      .parr-link-reg-log{
          display: flex;
          justify-content: center;
-     }     
+     }   
+     
+     .col-responsive{
+         width: 40vw;
+     }
  
      .footer-login{
          display: flex;
@@ -90,7 +98,7 @@
          max-width: 100%;
          position: absolute;
          text-align: center;
-         margin-top: 0;
+         margin-top: 20vh;
          color: rgba(100,100,100,.7);
      }
 

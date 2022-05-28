@@ -7,8 +7,13 @@
 }
 
 .footer{
+    width: 100vw;
+    max-width: 100%;
     color: #2c3e50;
     margin-bottom: 1vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 .container{
     max-width: 95vw !important;

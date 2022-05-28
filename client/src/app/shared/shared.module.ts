@@ -8,7 +8,7 @@ import { OrderTotalsComponent } from './components/order-totals/order-totals.com
 import { ReactiveFormsModule } from '@angular/forms';
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import { TextInputComponent } from './components/text-input/text-input.component';
-
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -23,7 +23,9 @@ import { TextInputComponent } from './components/text-input/text-input.component
     PaginationModule.forRoot(),
     BsDropdownModule.forRoot(),
     CarouselModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
+
   ],
   exports:[
     PaginationModule,
