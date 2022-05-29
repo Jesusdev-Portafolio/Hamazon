@@ -18,4 +18,5 @@ import { CoreModule } from '../core/core.module';
     CoreModule
   ],exports:[HomeComponent]
 })
+
 export class HomeModule { }
