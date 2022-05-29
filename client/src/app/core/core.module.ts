@@ -12,7 +12,6 @@ import { SharedModule } from '../shared/shared.module';
 import { FooterComponent } from './footer/footer.component';
 
 
-
 @NgModule({
   declarations: [NavBarComponent, TestErrorComponent, NotFoundComponent, ServerErrorComponent, SectionHeaderComponent, FooterComponent],
   imports: [

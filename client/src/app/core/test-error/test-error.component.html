@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<!--<div class="container mt-5">
     <button (click)="get500Error()" class="btn btn-outline-primary mr-3">Test 500</button>
     <button (click)="get404Error()" class="btn btn-outline-primary mr-3">Test 404</button>
     <button (click)="get400Error()" class="btn btn-outline-primary mr-3">Test 400</button>
@@ -9,4 +9,35 @@
         </ul>
     </div>
 
+</div>
+-->
+<div class="main-contact">
+    <h1>Contactanos</h1>
+</div>
+<div class="nav-icons my-icons">
+    <div class="d-flex">
+        <div class="nav-icon">
+            <a routerLink="/contacto"><i class="fa fa-facebook-square icon-style fb"></i></a>
+            <a routerLink="/contacto"><span class="nav-icon-transition icon-style-to-up fb"><i class="fa fa-thumbs-up"></i></span></a>
+        </div>
+        <div class="nav-icon">
+            <a routerLink="/contacto"><i class="fa fa-instagram icon-style ig"></i></a>
+            <a routerLink="/contacto"><span class="nav-icon-transition icon-style-to-up heart"><i class="fa fa-heart"></i></span></a>
+        </div>
+    </div>
+    <div class="d-flex">
+        <div class="nav-icon">
+            <a routerLink="/contacto"><i class="fa fa-twitter-square icon-style twiter"></i></a>
+            <a routerLink="/contacto"><span class="nav-icon-transition icon-style-to-up twiter"><i class="fa fa-twitter"></i></span></a>
+        </div>
+        <div class="nav-icon">
+            <a routerLink="/contacto"><i class="fa fa-github-square icon-style github"></i></a>
+            <a routerLink="/contacto"><span class="nav-icon-transition icon-style-to-up github"><i class="fa fa-code-fork"></i></span></a>
+        </div>
+    </div>  
+</div>
+<div class="contact-number"> <span class="phone-number btn btn-primary"><i class="fa fa-phone"> </i> 555-5555-555</span></div>
+
+<div class="contact-footer">
+    <app-footer></app-footer>
 </div>

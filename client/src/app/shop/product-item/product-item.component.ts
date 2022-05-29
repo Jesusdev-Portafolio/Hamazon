@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { timer } from 'rxjs';
 import { BasketService } from 'src/app/basket/basket.service';
 import { Basket } from 'src/app/shared/models/basket';
 import { IProduct } from 'src/app/shared/models/product';
@@ -19,12 +20,14 @@ export class ProductItemComponent implements OnInit {
   }
 
   addItemToBasket(){
-    this.basketService.addItemToBasket(this.product);
-    this.toastr.success("Añadido Correctamente", "", {
-      timeOut:1500,
-      positionClass: 'toast-center-center' , 
-      closeButton: true
-   
+    this.basketService.addItemToBasket(this.product);  
+    const timer$ = timer(1100);
+    timer$.subscribe((n) =>{
+      this.toastr.success("Añadido Correctamente", "", {
+        timeOut:1500,
+        positionClass: 'toast-center-center' , 
+        closeButton: true
+    })
    });
   }
 

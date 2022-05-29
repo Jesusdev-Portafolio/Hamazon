@@ -115,6 +115,11 @@
 }
 
 @media(max-width : 600px){
+    .btn-eliminar-todo{
+        padding-top: 10px;
+        border-top: 1px solid rgba(100,100,100,.4);
+    }
+
     .nobasket-message{
         font-size: 35px;
         border-bottom: 2px solid orange;

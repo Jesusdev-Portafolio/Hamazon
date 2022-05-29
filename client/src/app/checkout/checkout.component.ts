@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { Observable } from 'rxjs';
+import { Observable, timer } from 'rxjs';
 import { AccountService } from '../account/account.service';
 import { BasketService } from '../basket/basket.service';
 import { IBasket, IBasketTotals } from '../shared/models/basket';
@@ -33,13 +33,15 @@ export class CheckoutComponent implements OnInit {
 
   pagar(basket:IBasket){
     this.bsktService.deleteBasket(basket);
-    this.toastr.success("Compra Realizada Correctamente", "", {
-      timeOut:1500,
-      positionClass: 'toast-center-center' , 
-      closeButton: true
-   
-   });
 
+    const timer$ = timer(1100);
+    timer$.subscribe((n)=>{
+      this.toastr.success("¡Compra Exitosa!", "", {
+        timeOut:1500,
+        positionClass: 'toast-center-center' , 
+        closeButton: true
+     });
+    })
   }
 
 }
