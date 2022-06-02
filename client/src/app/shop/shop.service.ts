@@ -7,13 +7,14 @@ import { map } from 'rxjs/operators';
 import { ShopParams } from '../shared/models/shopParams';
 import { IProduct } from '../shared/models/product';
 import * as $ from 'jquery';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShopService {
 
-  baseUrl = 'https://localhost:5001/api/'; 
+  baseUrl = environment.apiUrl; 
 
   constructor(private http: HttpClient) { }
 
@@ -42,17 +43,12 @@ export class ShopService {
       params = params.append('pageIndex' , shopParams.pageNumber.toString());
       params = params.append('pageSize' , this.itemsPerPage().toString())
 
-     
-
-    
-
     return this.http.get<IPagination>(this.baseUrl + 'products', {observe: 'response', params})
       .pipe(
         map(response => {
           return response.body;
         })
       )
-
   }
 
   getProduct(id: number){

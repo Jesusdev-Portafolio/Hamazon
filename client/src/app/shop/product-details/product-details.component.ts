@@ -27,10 +27,10 @@ export class ProductDetailsComponent implements OnInit {
 
     addItemToBasket(){
       this.basketService.addItemToBasket(this.product, this.quantity);
-      const timer$ = timer(1100);
+      const timer$ = timer(150);
       timer$.subscribe((n) =>{
         this.toastr.success("Añadido Correctamente", "", {
-          timeOut:1500,
+          timeOut:1200,
           positionClass: 'toast-center-center' , 
           closeButton: true,
        });

@@ -2,7 +2,8 @@ import { registerLocaleData } from '@angular/common';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject, map, of, ReplaySubject } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
+import { BehaviorSubject, map, of, ReplaySubject, timer } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { IUser } from '../shared/models/user';
 
@@ -13,8 +14,8 @@ export class AccountService {
   baseUrl = environment.apiUrl;
   private currentUserSource = new ReplaySubject<IUser>(1);
   currentUser$ = this.currentUserSource.asObservable();
-
-  constructor(private http:HttpClient, private router: Router) { }
+  
+  constructor(private http:HttpClient, private router: Router, private toastr: ToastrService) { }
 
   loadCurrentUser(token:string){
     if(token === null){
@@ -59,6 +60,14 @@ export class AccountService {
     localStorage.removeItem('token');
     this.currentUserSource.next(null);
     this.router.navigateByUrl('/');
+    const timer$ = timer(150);
+    timer$.subscribe((n)=>{
+      this.toastr.success("¡Hasta luego!", "", {
+        timeOut:1200,
+        positionClass: 'toast-center-center' , 
+        closeButton: true
+     });
+    });
   }
 
   checkEmailExists(email: string){

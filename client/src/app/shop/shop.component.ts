@@ -5,6 +5,7 @@ import { IType } from '../shared/models/productType';
 import { ShopParams } from '../shared/models/shopParams';
 import { ShopService } from './shop.service';
 import * as $ from 'jquery';
+//import { PageChangedEvent } from 'ngx-bootstrap/pagination';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class ShopComponent implements OnInit {
   products: IProduct[];
   brands: IBrand[];
   types: IType[];
-  shopParams = new ShopParams()
+  shopParams = new ShopParams();
   totalItems: number;
   sortOptions = [
     {name: 'Nombre', value: 'Name'},
@@ -26,21 +27,31 @@ export class ShopComponent implements OnInit {
     {name: 'Precio: Mas Caros Primero', value: 'PriceDesc'}
   ];
 
+ comprobarVieneDeFuncion: boolean;
+
+   
+
   constructor(private shopService: ShopService) { }
 
   ngOnInit(): void {
-
-   this.getProducts();
+   this.getProducts("kk");
    this.getTypes();
    this.getBrands();
   }
 
-  getProducts () {
-    this.shopService.getProducts(this.shopParams).subscribe(response => {
-      this.products = response.data;
-      this.shopParams.pageNumber = response.pageIndex;
-      this.shopParams.pageSize = response.pageSize;
-      this.totalItems = response.totalItems;
+     getProducts (origen:string) {
+          this.shopService.getProducts(this.shopParams).subscribe(response => {
+          this.products = response.data;
+          this.shopParams.pageNumber = response.pageIndex
+          this.shopParams.pageSize = response.pageSize;
+          this.shopParams.totalPages = response.totalPAges;
+          this.totalItems = response.totalItems;
+
+           this.comprobarVieneDeFuncion = origen === "main";
+           console.log(this.comprobarVieneDeFuncion)
+        
+      
+      
     }, error => {
       console.log(error);
     });
@@ -65,39 +76,49 @@ export class ShopComponent implements OnInit {
   onBrandSelected(brandId: number) {
     this.shopParams.brandId  = brandId;
     this.shopParams.pageNumber = 1;
-    this.getProducts();
+    this.getProducts("main");
   }
 
-  onTypeSelected(typeId: number) {
+  onTypeSelected(typeId: number) { 
     this.shopParams.typeId = typeId;
     this.shopParams.pageNumber = 1;
-    this.getProducts();
+    this.getProducts("main");
+    
   }
 
   onSortSelected(sort: string){
     this.shopParams.sort = sort;
-    this.getProducts();
+    this.shopParams.pageNumber = 1;
+    this.getProducts("main");
   }
 
   onPageChange(event: any){
-    if(this.shopParams.pageNumber !== event){
-      this.shopParams.pageNumber = event;
-      this.getProducts();
-    }
+
+    console.log(this.shopParams.pageNumber)
+    console.log(event);
+    console.log(this.comprobarVieneDeFuncion + "1") 
+
+    if(!this.comprobarVieneDeFuncion){
+        this.shopParams.pageNumber = event;
+        this.getProducts("kk");
+      }
+    this.comprobarVieneDeFuncion = false;
+    console.log(this.comprobarVieneDeFuncion + " 2")
   }
+  
    onSearch(){
-     this.shopParams.search = this.searchTerm.nativeElement.value;
-    this.shopParams.pageNumber = 1;
-    this.shopParams.typeId = 0; // no lo se rick creo que esta bien si no lo borro y queda como esta por defecto en 1
-     this.getProducts();
+     //si es nulo uno tendra algo el otro y si son nulos los dos pues retorno todo
+      this.shopParams.search = this.searchTerm.nativeElement.value !== "" ? this.searchTerm.nativeElement.value : this.searchTermMobile.nativeElement.value; 
+      this.shopParams.pageNumber = 1;
+      this.shopParams.typeId = 0; // no lo se rick creo que esta bien si no lo borro y queda como esta por defecto en 1
+      this.getProducts("main");
    }
 
    onReset(){
-
       $('.sort-reset').prop('selectedIndex', 0);
      this.searchTerm.nativeElement.value = '';
      this.searchTermMobile.nativeElement.value = '';
      this.shopParams = new ShopParams();
-     this.getProducts();
+     this.getProducts("main");
    }
 }

@@ -22,10 +22,10 @@ export class BasketComponent implements OnInit {
 
   removeBasketItem(item:IBasketItem){
     this.basketService.removeItemFromBasket(item);
-    const timer$ = timer(1100);
+    const timer$ = timer(150);
     timer$.subscribe((n) =>{
       this.toastr.success("Eliminado Correctamente", "", {
-        timeOut:1500,
+        timeOut:1200,
         positionClass: 'toast-center-center' , 
         closeButton: true,
      });
@@ -43,13 +43,13 @@ export class BasketComponent implements OnInit {
 
   deleteBasket(basket:IBasket){
     this.basketService.deleteBasket(basket);
-    const timer$ = timer(1100);
+    const timer$ = timer(150);
     timer$.subscribe((n)=>{
       this.toastr.success("Productos Eliminados", "", {
-        timeOut:1500,
+        timeOut:1200,
         positionClass: 'toast-center-center' , 
         closeButton: true
      });
-    })
+    });
   }
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { map, Observable } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
+import { map, Observable, timer } from 'rxjs';
 import { AccountService } from 'src/app/account/account.service';
 
 @Injectable({
@@ -8,7 +9,7 @@ import { AccountService } from 'src/app/account/account.service';
 })
 export class AuthGuard implements CanActivate {
 
-  constructor(private accountService: AccountService, private router:Router){}
+  constructor(private accountService: AccountService, private router:Router, private toastr: ToastrService){}
 
 //si esta logueado lo activamos si no no 
   canActivate(
@@ -20,6 +21,15 @@ export class AuthGuard implements CanActivate {
           return true;
         }
         this.router.navigate(['cuenta/Ingresar'], {queryParams:{returnUrl: state.url}});
+        const timer$ = timer(150);
+        timer$.subscribe((n)=>{
+          this.toastr.error("Ingresa para completar tu compra", "", {
+          timeOut:1200,
+          positionClass: 'toast-center-center' , 
+          closeButton: true
+     });
+    });
+        
       })
     )
   }

@@ -5,7 +5,6 @@ using API.Helpers;
 using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
-using Core.Specification;
 using Infraestructure.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,9 +14,6 @@ namespace API.Controllers
 
     public class ProductsController : BaseApiController
     {
-       // private readonly IGenericRepository<Product> _productRepo;
-       // private readonly IGenericRepository<ProductBrand> _productBrandRepo;
-       // private readonly IGenericRepository<ProductType> _productTypeRepo;
        private readonly IProductRepository _productRepo;
         private readonly ITypeRepository _productTypeRepo;
         private readonly IBrandRepository _productBrandRepo;
@@ -42,9 +38,6 @@ namespace API.Controllers
             var totalItems = products.Count;
             var data = _mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products);
 
-            /* return products.Count > 0 ? Ok(new Pagination<ProductToReturnDto>(pageIndex, pageSize, totalItems, data)) 
-                 : BadRequest("No hay productos Disponibles con las especificaciones indicadas en estos momentos");  
-            */
             return Ok(new Pagination<ProductToReturnDto>(pageIndex, pageSize, totalItems, data));
         }
 

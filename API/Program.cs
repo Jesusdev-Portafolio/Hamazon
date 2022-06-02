@@ -1,55 +1,97 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using API.Extensions;
+using API.Helpers;
+using API.Middleware;
 using Core.Entities.Identity;
 using Infraestructure.Data;
 using Infraestructure.Identity;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.FileProviders;
+using StackExchange.Redis;
 
+var builder = WebApplication.CreateBuilder(args);
 
-namespace API
+//agg services al contenedor
+
+builder.Services.AddAutoMapper(typeof(MappingProfiles));
+builder.Services.AddControllers();
+builder.Services.AddDbContext<StoreContext>(c => c.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<AppIdentityDbContext>(c =>
 {
-    public class Program
+    c.UseNpgsql(builder.Configuration.GetConnectionString("IdentityConnection"));
+});
+
+//redis para el carrito singleton para que exista mientras este iniciada la aplicacion, si se apaga la aplicacion no pasa nada porque hace snapshoots cada minuto bueno
+//se perderia lo de cada minuto obviamente
+
+builder.Services.AddSingleton<IConnectionMultiplexer>(c => {
+    var configuration = ConfigurationOptions.Parse(builder.Configuration
+        .GetConnectionString("Redis"), true);
+    return ConnectionMultiplexer.Connect(configuration);
+});
+
+builder.Services.AddApplicationServices();
+builder.Services.AddIdentityServices(builder.Configuration);
+builder.Services.AddSwaggerDocumentation();
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy("CorsPolicy", policy =>
     {
-        public static async Task Main(string[] args)
-        {
-            var host = CreateHostBuilder(args).Build();
-            using (var scope = host.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                var loggerFactory = services.GetRequiredService<ILoggerFactory>();
-                try
-                {
-                    var context = services.GetRequiredService<StoreContext>();
-                    await context.Database.MigrateAsync();
-                    await StoreContextSeed.SeedAsync(context , loggerFactory);
+        policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200");
 
-                    var userManager = services.GetRequiredService<UserManager<User>>();
-                    var identityContext = services.GetRequiredService<AppIdentityDbContext>();
+    });
+});
 
-                    await identityContext.Database.MigrateAsync();
-                    await AppIdentityDbContextSeed.SeedUserAsync(userManager);
-                }
-                catch (Exception ex)
-                {
-                    var logger = loggerFactory.CreateLogger<Program>();
-                    logger.LogError(ex, "Un error ha ocurrido mientras se hacia la migracion"); 
-                }
-            }
-            host.Run();
-        }
+//pipeline http request
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
+var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>();
+
+app.UseStatusCodePagesWithReExecute("/errors/{0}");
+
+app.UseHttpsRedirection();
+
+app.UseRouting();
+
+app.UseStaticFiles();
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "Content")
+    ),RequestPath = "/content"
+});
+
+app.UseCors("CorsPolicy");
+
+app.UseAuthentication();
+
+app.UseAuthorization();
+
+app.UserSwaggerDocumentation();
+
+app.MapControllers();
+app.MapFallbackToController("Index", "Fallback");
+
+using var scope = app.Services.CreateScope();
+var services = scope.ServiceProvider;
+var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+try
+{
+    var context = services.GetRequiredService<StoreContext>();
+    await context.Database.MigrateAsync();
+    await StoreContextSeed.SeedAsync(context, loggerFactory);
+    var userManager = services.GetRequiredService<UserManager<User>>();
+    var identityContext = services.GetRequiredService<AppIdentityDbContext>();
+
+    await identityContext.Database.MigrateAsync();
+    await AppIdentityDbContextSeed.SeedUserAsync(userManager);
 }
+catch (Exception ex)
+{
+  var logger = loggerFactory.CreateLogger<Program>();
+  logger.LogError(ex, "Un error ha ocurrido mientras se hacia la migracion");
+}
+
+await app.RunAsync();

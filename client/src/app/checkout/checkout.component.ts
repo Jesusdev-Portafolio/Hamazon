@@ -34,10 +34,10 @@ export class CheckoutComponent implements OnInit {
   pagar(basket:IBasket){
     this.bsktService.deleteBasket(basket);
 
-    const timer$ = timer(1100);
+    const timer$ = timer(150);
     timer$.subscribe((n)=>{
       this.toastr.success("¡Compra Exitosa!", "", {
-        timeOut:1500,
+        timeOut:1200,
         positionClass: 'toast-center-center' , 
         closeButton: true
      });
