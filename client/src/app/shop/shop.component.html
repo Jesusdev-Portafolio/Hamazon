@@ -4,7 +4,7 @@
             <section class="col-3">
                     <ng-container *ngIf="types && brands">
                         <h5 class="text-warning ml-3 mt-4 mb-2">Ordenar Por</h5>
-                        <select class="custom-select mb-4 sort-reset" (change)="onSortSelected($event.target.value)" >
+                        <select [(ngModel)]="selected" class="custom-select mb-4 sort-reset" (change)="onSortSelected($event.target.value)" >
                             <option *ngFor="let sort of sortOptions"
                                 [value]="sort.value"
                             >
@@ -61,16 +61,14 @@
                     </div>
                   </div>
                   <div class="d-flex justify-content-center" *ngIf="totalItems > 0">
-                    <!--[(ngModel)]="currentPage"-->
-                    
                     <app-pager
                         [pageSize]="shopParams.pageSize"
                         [totalItems]="totalItems"
+                        [currentPage]="currentPage"
                         (pageChanged)="onPageChange($event)"
                     ></app-pager>
     
                   </div>
-
                   <div class="footer">
                       <app-footer></app-footer>
                   </div>
@@ -107,7 +105,7 @@
                 </div>
                 <div class="Tipos col-4">
                     <h5 class="filters-title-color ml-3"><span>Categ</span></h5>
-                    <select class="my-3 custom-select margin-mobile-filters" (change)="onTypeSelected($event.target.value)">
+                    <select [ngModel]="selected" class="my-3 custom-select margin-mobile-filters" (change)="onTypeSelected($event.target.value)">
                         <option class="list-group-item" 
                         *ngFor="let type of types"
                         [class.active] = "type.id === this.shopParams.typeId"
@@ -150,6 +148,7 @@
                   <div class="d-flex justify-content-center" *ngIf="totalItems > 0">
                         <app-pager
                         [pageSize]="shopParams.pageSize"
+                        [currentPage]="currentPage"
                         [totalItems]="totalItems"
                         (pageChanged)="onPageChange($event)" 
                     ></app-pager>

@@ -58,6 +58,8 @@ MIT
 ngx-bootstrap/utils
 MIT
 
+ngx-pagination
+
 ngx-spinner
 MIT
 

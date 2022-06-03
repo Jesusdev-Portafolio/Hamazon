@@ -8,6 +8,7 @@ import { ShopRoutingModule } from './shop-routing.module';
 import { CoreModule } from '../core/core.module';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
 //import { FormsModule } from '@angular/forms'; 
 
 
@@ -17,6 +18,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
   imports: [
     CommonModule,
     NgxPaginationModule,
+    FormsModule,
     SharedModule,
     ShopRoutingModule,
     CoreModule,

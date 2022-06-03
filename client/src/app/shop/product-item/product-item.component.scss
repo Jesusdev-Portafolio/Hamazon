@@ -73,7 +73,7 @@
 }
 
 
-@media (max-width: 2560px){
+@media (max-width : 2560px){
     .card{
         height: 470px !important;
         width: 15vw;
@@ -94,6 +94,28 @@
         height: 350px;
     }
     
+}
+@media (max-width: 1750px){
+    .card{
+        height: 400px !important;
+        width: 15vw;
+    }
+
+    .card-body a h6{
+        font-size: 100%;
+    }
+    .card-body span{
+        font-size: 95%;
+    }
+
+    .img-product{
+        height: 230px;
+        width: 90%;
+    }
+
+    .image{
+        height: 290px;
+    }
 }
 
 @media (max-width: 1300px){

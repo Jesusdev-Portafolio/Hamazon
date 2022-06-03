@@ -5,7 +5,8 @@ import { IType } from '../shared/models/productType';
 import { ShopParams } from '../shared/models/shopParams';
 import { ShopService } from './shop.service';
 import * as $ from 'jquery';
-//import { PageChangedEvent } from 'ngx-bootstrap/pagination';
+import { PageChangedEvent } from 'ngx-bootstrap/pagination';
+
 
 
 @Component({
@@ -16,42 +17,36 @@ import * as $ from 'jquery';
 export class ShopComponent implements OnInit {
   @ViewChild('search', {static: false}) searchTerm: ElementRef;//antes estaba a true pero se cargaba antes del loading por eso lo cambio a false y ya se carga despues
   @ViewChild('searchMobile', {static: false}) searchTermMobile: ElementRef
+  currentPage : number;
   products: IProduct[];
   brands: IBrand[];
   types: IType[];
   shopParams = new ShopParams();
   totalItems: number;
+  pageSelected = 1;
+  pages = [];
+  selected : string;
   sortOptions = [
     {name: 'Nombre', value: 'Name'},
     {name: 'Precio: Mas Baratos Primero', value: 'Price'}, // because in my API the default option is for Price ASC so no needed to explicit describe here
     {name: 'Precio: Mas Caros Primero', value: 'PriceDesc'}
   ];
 
- comprobarVieneDeFuncion: boolean;
-
-   
-
   constructor(private shopService: ShopService) { }
 
   ngOnInit(): void {
-   this.getProducts("kk");
+    this.selected = "Name";
+   this.getProducts();
    this.getTypes();
    this.getBrands();
   }
 
-     getProducts (origen:string) {
-          this.shopService.getProducts(this.shopParams).subscribe(response => {
-          this.products = response.data;
-          this.shopParams.pageNumber = response.pageIndex
-          this.shopParams.pageSize = response.pageSize;
-          this.shopParams.totalPages = response.totalPAges;
-          this.totalItems = response.totalItems;
-
-           this.comprobarVieneDeFuncion = origen === "main";
-           console.log(this.comprobarVieneDeFuncion)
-        
-      
-      
+  getProducts () {
+    this.shopService.getProducts(this.shopParams).subscribe(response => {
+      this.products = response.data;
+      this.shopParams.pageNumber = response.pageIndex;
+      this.shopParams.pageSize = response.pageSize;
+      this.totalItems = response.totalItems;
     }, error => {
       console.log(error);
     });
@@ -76,49 +71,55 @@ export class ShopComponent implements OnInit {
   onBrandSelected(brandId: number) {
     this.shopParams.brandId  = brandId;
     this.shopParams.pageNumber = 1;
-    this.getProducts("main");
+    this.currentPage = 1;
+    this.getProducts();
   }
 
   onTypeSelected(typeId: number) { 
+    this.shopParams = new ShopParams();
     this.shopParams.typeId = typeId;
     this.shopParams.pageNumber = 1;
-    this.getProducts("main");
-    
+    this.currentPage = 1;
+    this.getProducts();
   }
 
   onSortSelected(sort: string){
     this.shopParams.sort = sort;
     this.shopParams.pageNumber = 1;
-    this.getProducts("main");
+    this.currentPage = 1;
+    this.getProducts();
+  }
+  onSelectedPage(){
+      this.pageSelected  = $(this).value; 
+      console.log(this.pageSelected);
+ 
+    this.shopParams.pageNumber = this.pageSelected;
+    this.getProducts();
   }
 
   onPageChange(event: any){
-
-    console.log(this.shopParams.pageNumber)
-    console.log(event);
-    console.log(this.comprobarVieneDeFuncion + "1") 
-
-    if(!this.comprobarVieneDeFuncion){
-        this.shopParams.pageNumber = event;
-        this.getProducts("kk");
-      }
-    this.comprobarVieneDeFuncion = false;
-    console.log(this.comprobarVieneDeFuncion + " 2")
+    if(this.shopParams.pageNumber !== event){
+      this.currentPage = event;
+      this.shopParams.pageNumber = event;
+      this.getProducts();
+    }
   }
-  
    onSearch(){
      //si es nulo uno tendra algo el otro y si son nulos los dos pues retorno todo
       this.shopParams.search = this.searchTerm.nativeElement.value !== "" ? this.searchTerm.nativeElement.value : this.searchTermMobile.nativeElement.value; 
       this.shopParams.pageNumber = 1;
       this.shopParams.typeId = 0; // no lo se rick creo que esta bien si no lo borro y queda como esta por defecto en 1
-      this.getProducts("main");
+      this.currentPage = 1;
+      this.getProducts();
    }
 
    onReset(){
-      $('.sort-reset').prop('selectedIndex', 0);
+      //$('.sort-reset').prop('selectedIndex', 0);
+      this.selected = "Name";
      this.searchTerm.nativeElement.value = '';
      this.searchTermMobile.nativeElement.value = '';
+     this.currentPage = 1;
      this.shopParams = new ShopParams();
-     this.getProducts("main");
+     this.getProducts();
    }
 }
