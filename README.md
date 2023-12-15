@@ -69,8 +69,8 @@
 <div style="display:flex; flex-wrap:wrap; justify-content:center; background-color: rgba(255,255,255,0.05); padding-top:40px;padding-bottom:40px">
 
   <img src="readme_img/Hamazon_home_desktop.png" alt="Hamazon_Home" style="border: 1px solid  black; width: 700px"/>
-  <img src="readme_img/Hamazon_tienda_desktop.png" alt="Hamazon_Home" style="border: 1px solid  black; width: 700px; margin-top: 10px"/>
-  <img src="readme_img/Hamazon_carrito_desktop.png" alt="Hamazon_Home" style="border: 1px solid  black; width: 700px; margin-top: 10px"/>
+  <img src="readme_img/Hamazon_tienda_desktop.png" alt="Hamazon_Tienda" style="border: 1px solid  black; width: 700px; margin-top: 10px"/>
+  <img src="readme_img/Hamazon_carrito_desktop.png" alt="Hamazon_Carrito" style="border: 1px solid  black; width: 700px; margin-top: 10px"/>
 
 </div>
 
