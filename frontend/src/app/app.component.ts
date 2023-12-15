@@ -11,6 +11,9 @@ import { BasketService } from './basket/basket.service';
 export class AppComponent implements OnInit {
   title = 'Hamazon'; //espero los profes tengan sentido del humor :D
 
+  //TODO: Hacer hoja de pago /Checkout, ya tengo el modulo solo falta el html
+  //TODO: Hacer orders para tener los pedidos por separado.
+
   constructor(private basketService: BasketService, private accountService:AccountService) { }
 
   ngOnInit(): void {

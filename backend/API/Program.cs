@@ -11,6 +11,10 @@ using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//TODO: Hacer el Controlador de ordenes
+//TODO: Cambiar La DB de postGree a SQLServer para desplegar mas facil
+//TODO: Cambiar de Redis a MongoDB para desplegar mas facil.
+
 //agg services al contenedor
 
 builder.Services.AddAutoMapper(typeof(MappingProfiles));
