@@ -82,7 +82,7 @@
             <ng-container *ngIf="types && brands">
                 <div class="Ordenar col-4">
                     <h5 class="filters-title-color ml-2 mt-4 mb-2 no-margin-mobile"><span>Ordenar</span></h5>
-                    <select class="custom-select mb-4 margin-mobile-filters sort-reset" (change)="onSortSelected($event.target.value)" >
+                    <select [(ngModel)]="selected" class="custom-select mb-4 margin-mobile-filters sort-reset" (change)="onSortSelected($event.target.value)" >
                         <option *ngFor="let sort of sortOptions"
                             [value]="sort.value"
                         >
@@ -105,7 +105,7 @@
                 </div>
                 <div class="Tipos col-4">
                     <h5 class="filters-title-color ml-3"><span>Categ</span></h5>
-                    <select [ngModel]="selected" class="my-3 custom-select margin-mobile-filters" (change)="onTypeSelected($event.target.value)">
+                    <select class="my-3 custom-select margin-mobile-filters" (change)="onTypeSelected($event.target.value)">
                         <option class="list-group-item" 
                         *ngFor="let type of types"
                         [class.active] = "type.id === this.shopParams.typeId"

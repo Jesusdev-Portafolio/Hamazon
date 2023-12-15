@@ -1,4 +1,4 @@
-using API.Extensions;
+    using API.Extensions;
 using API.Helpers;
 using API.Middleware;
 using Core.Entities.Identity;
@@ -15,11 +15,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAutoMapper(typeof(MappingProfiles));
 builder.Services.AddControllers();
-builder.Services.AddDbContext<StoreContext>(c => c.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<StoreContext>(c => 
+c.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 builder.Services.AddDbContext<AppIdentityDbContext>(c =>
-{
-    c.UseNpgsql(builder.Configuration.GetConnectionString("IdentityConnection"));
-});
+    c.UseNpgsql(builder.Configuration.GetConnectionString("IdentityConnection"))
+);
 
 //redis para el carrito singleton para que exista mientras este iniciada la aplicacion, si se apaga la aplicacion no pasa nada porque hace snapshoots cada minuto bueno
 //se perderia lo de cada minuto obviamente
@@ -95,3 +96,5 @@ catch (Exception ex)
 }
 
 await app.RunAsync();
+
+public partial class Program { }

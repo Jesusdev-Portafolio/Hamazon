@@ -6,7 +6,6 @@ import { IType } from '../shared/models/productType';
 import { map } from 'rxjs/operators';
 import { ShopParams } from '../shared/models/shopParams';
 import { IProduct } from '../shared/models/product';
-import * as $ from 'jquery';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -35,7 +34,7 @@ export class ShopService {
       }else{
         params = params.append('orderBy', "Price");
         params = params.append('AscDesc', 'Desc');
-      }
+      }    
       if(shopParams.search){
         params = params.append('search', shopParams.search)
       }

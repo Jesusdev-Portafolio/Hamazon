@@ -28,15 +28,20 @@ namespace Infraestructure.Data
 
         public async Task<IReadOnlyList<Product>> GetProductsAsync(string orderBy, string AscDesc, ProductBrand brand, ProductType type, string search)
         {
-            orderBy = (orderBy == "Name" || orderBy == "Price") ? orderBy : "Name";
+            //ME TRAIGO TODO
+            var products = _context.Products
+                         .Include(p => p.ProductType)
+                         .Include(p => p.ProductBrand).AsEnumerable();
+
+            orderBy = (orderBy == "Name" || orderBy == "Price") ? orderBy : "Name";  //VALOR POR DEFECTO = NAME
+
+            //EMPIEZO A APLICAR FILTROS
             Func<Product, Object> orderByFunc = null;
             if (orderBy == "Name")
                 orderByFunc = p => p.Name;
             else orderByFunc = p => p.Price;
-            var products = _context.Products
-                           .Include(p => p.ProductType)
-                           .Include(p => p.ProductBrand).AsEnumerable();
 
+          
             if (search != null)
             {
                 try
@@ -65,7 +70,6 @@ namespace Infraestructure.Data
                     return await Task.FromResult(products.ToList());
                 default:
                     products = products.OrderBy(orderByFunc);
-
                     return await Task.FromResult(products.ToList());
             }
         }

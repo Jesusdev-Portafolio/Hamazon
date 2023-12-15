@@ -35,7 +35,7 @@ export class ShopComponent implements OnInit {
   constructor(private shopService: ShopService) { }
 
   ngOnInit(): void {
-    this.selected = "Name";
+   this.selected = "Name";
    this.getProducts();
    this.getTypes();
    this.getBrands();
@@ -73,14 +73,16 @@ export class ShopComponent implements OnInit {
     this.shopParams.pageNumber = 1;
     this.currentPage = 1;
     this.getProducts();
+    console.log(this.shopParams);
   }
 
   onTypeSelected(typeId: number) { 
-    this.shopParams = new ShopParams();
+    //this.shopParams = new ShopParams();
     this.shopParams.typeId = typeId;
     this.shopParams.pageNumber = 1;
     this.currentPage = 1;
     this.getProducts();
+    console.log(this.shopParams);
   }
 
   onSortSelected(sort: string){
@@ -88,6 +90,7 @@ export class ShopComponent implements OnInit {
     this.shopParams.pageNumber = 1;
     this.currentPage = 1;
     this.getProducts();
+    console.log(this.shopParams);
   }
   onSelectedPage(){
       this.pageSelected  = $(this).value; 
@@ -109,6 +112,7 @@ export class ShopComponent implements OnInit {
       this.shopParams.search = this.searchTerm.nativeElement.value !== "" ? this.searchTerm.nativeElement.value : this.searchTermMobile.nativeElement.value; 
       this.shopParams.pageNumber = 1;
       this.shopParams.typeId = 0; // no lo se rick creo que esta bien si no lo borro y queda como esta por defecto en 1
+      this.shopParams.brandId = 0;
       this.currentPage = 1;
       this.getProducts();
    }
@@ -120,6 +124,7 @@ export class ShopComponent implements OnInit {
      this.searchTermMobile.nativeElement.value = '';
      this.currentPage = 1;
      this.shopParams = new ShopParams();
+     this.shopParams.typeId = 0;
      this.getProducts();
    }
 }

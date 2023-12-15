@@ -18,8 +18,8 @@
                 "name": "Linux",
                 "description": "SFTP folder",
 
-                "host": "178.62.125.191", "port": 22,
-                "user": "root", "password": "33HvD&2#Q(LGg!F",
+                "host": "134.209.17.160", "port": 22,
+                "user": "root", "password": "!MZqzKICMAL^0xM",
 
                 "dir": "/var/hamazon",
                 "mappings": {

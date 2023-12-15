@@ -68,7 +68,8 @@ namespace API.Controllers
 
             var result = await _userManager.UpdateAsync(user);
 
-            return result.Succeeded ? Ok(_mapper.Map<AddressDto>(user.Address))
+            return result.Succeeded 
+                ? Ok(_mapper.Map<AddressDto>(user.Address))
                 : BadRequest("Problem Updating The User");
         }
 

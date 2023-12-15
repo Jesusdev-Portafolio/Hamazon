@@ -4,28 +4,30 @@ services:
     image: redis:latest
     ports:
       - 6379:6379
-    command: ["redis-server", "--appendonly", "yes"]
+    command: redis-server /usr/local/etc/redis/redis.conf --requirepass mypassword
     volumes:
       - redis-data:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
 
   redis-commander:
     image: rediscommander/redis-commander:latest
     environment:
-      - REDIS_HOSTS=local:redis:6379
+      - REDIS_HOST=redis
+      - REDIS_PASSWORD=mypassword
       - HTTP_USER=root
       - HTTP_PASSWORD=secret
     ports:
       - 8081:8081
     depends_on:
       - redis
-      
+
   db:
     image: postgres
     restart: always
     environment:
       POSTGRES_PASSWORD: secreto
       POSTGRES_USER: appuser
-    ports:
+    ports: 
       - 5432:5432
 
   adminer:

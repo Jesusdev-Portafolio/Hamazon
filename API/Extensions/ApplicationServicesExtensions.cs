@@ -19,7 +19,7 @@ namespace API.Extensions
             services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.InvalidModelStateResponseFactory = ActionContext =>
-                {
+                {                                                                                                       
                     var errors = ActionContext.ModelState
                     .Where(e => e.Value.Errors.Count > 0)
                     .SelectMany(e => e.Value.Errors)

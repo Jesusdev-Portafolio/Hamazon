@@ -40,7 +40,9 @@
                     <tr *ngFor="let item of (basket$ | async).items">
                       <th scope="row">
                         <div class="p-2">
-                          <img src="{{item.pictureUrl}}" alt="{{item.productName}}" class="img-fluid img-size">
+                          <a routerLink="/tienda/{{item.id}}">
+                            <img src="{{item.pictureUrl}}" alt="{{item.productName}}" class="img-size">
+                          </a>
                           <div class=" d-inline-block align-middle ml-2">
                             <h5 class="mb-0 ">
                               <a routerLink="/tienda/{{item.id}}" class="link-item">{{item.productName}}</a>

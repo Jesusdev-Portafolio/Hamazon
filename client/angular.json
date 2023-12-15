@@ -35,7 +35,7 @@
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/popper.js/dist/umd/popper.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js"
-             
+  
             ]
           },
           "configurations": {
@@ -74,8 +74,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "sslKey": "ssl/AngCert.key",
-              "sslCert": "ssl/AngCert.crt",
+            "sslKey": "ssl/localhost-key.pem",
+              "sslCert": "ssl/localhost.pem",
               "ssl": true
           },
           "configurations": {

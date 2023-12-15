@@ -20,7 +20,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    FormsModule,
+    FormsModule, 
     PaginationModule.forRoot(),
     BsDropdownModule.forRoot(),
     CarouselModule.forRoot(),

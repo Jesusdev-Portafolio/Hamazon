@@ -27,7 +27,7 @@
             <h3 class="product-title">{{product.name}}</h3>
         </div>
         <div class="row" *ngIf="product">
-            <div class="col-12  justify-content-center mt-2 heigth-70vh d-flex flex-column justify-content-center">
+            <div class="col-12  justify-content-center mt-2 heigth-70vh d-flex flex-column align-items-center">
                 <img src="{{product.pictureUrl}}" alt="{{product.name}}" class="img-fluid img-details">
                 <p class="mt-3 text-center" style="font-size: 2.2em;">{{product.price | currency:'EUR':'symbol'}}</p>
             </div>
@@ -43,7 +43,7 @@
                          </div>
                          <button (click)="addItemToBasket();" class="btn btn-primary  btn-main">A la Cesta</button>  
                     </div> 
-                    <div class="description mb-3">
+                    <div *ngIf="product" class="description mb-3">
                         <h4>Descripción</h4>
                         <p>{{product.description}}</p>
                    </div>

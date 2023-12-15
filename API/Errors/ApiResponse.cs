@@ -2,15 +2,15 @@
 {
     public class ApiResponse
     {
+      
+        public int StatusCode { get; set; }
+        public string Message { get; set; }
+
         public ApiResponse(int statusCode, string message = null)
         {
             this.StatusCode = statusCode;
             this.Message = message ?? GetDefaultMessageForStatusCode(StatusCode);
         }
-
-        public int StatusCode { get; set; }
-        public string Message { get; set; }
-      
 
         private string GetDefaultMessageForStatusCode(int statusCode)
         {

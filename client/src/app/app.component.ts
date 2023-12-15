@@ -9,7 +9,7 @@ import { BasketService } from './basket/basket.service';
 })
 
 export class AppComponent implements OnInit {
-  title = 'ProjectShop';
+  title = 'Hamazon'; //espero los profes tengan sentido del humor :D
 
   constructor(private basketService: BasketService, private accountService:AccountService) { }
 
