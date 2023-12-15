@@ -1,0 +1,225 @@
+.movil{
+    display: none;
+}
+
+.btn-main:h
+over{
+    background-color: white;
+    border: 1px solid #2c3e50;
+    transition: .5s;
+    color: #444;
+}
+
+@media (max-width: 2560px){
+    .img-details{
+        width: 450px;
+        height: 500px;
+    }
+
+    .product-title{
+        width: 100% !important;
+        text-align: start !important;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .heigth-70vh{
+        height: 70vh;
+        max-height: 100%;
+    }
+
+    .info-product{
+        margin-top: 10vh;
+        margin-left: -3vw;
+    }
+
+    .description{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center; 
+        width: 50%;
+    }
+
+    .description h4{
+        margin-top: 5vh;
+        width: 100%;
+        font-size: 35px;
+        font-weight: bold;
+        border-top: 1px solid rgba(150,150,150, .6);
+        padding-top: 3vh;
+    }
+
+    .description p{
+        width: 100%;
+        text-align: center;
+        font-size: 120%;
+    }
+
+    .btn-main{
+        font-size: 135%;
+        padding: 8px 12px;
+    }
+    
+}
+
+@media (max-width: 1300px){
+
+  
+    .img-details{
+        margin-left: 110px;
+        width: 335px;
+        height: 390px;
+    }
+
+    .btn-main{
+        padding: 6px 7px;
+        font-size: 120%;
+        border-radius: 5px;
+    }
+
+    .info-product{
+        margin-top: 2vh;
+        margin-left: -3vw;
+    }
+
+    .product-title{
+        width: 100% !important;
+        text-align: start !important;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .heigth-70vh{
+        height: 67vh;
+        max-height: 100%;
+    }
+
+    .description{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center; 
+        width: 50%;
+    }
+
+    .description h4{
+        margin-top: 5vh;
+        width: 100%;
+        font-size: 30px;
+        font-weight: bold;
+        border-top: 1px solid rgba(150,150,150, .6);
+        padding-top: 3vh;
+    }
+
+    .description p{
+        width: 100%;
+        text-align: center;
+        font-size: 105%;
+    }
+
+    .info-product p:first-child{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 992px){
+}
+
+@media (max-width: 767px){
+   
+}
+
+@media (max-width: 600px){
+    
+    .movil{
+        display: block;
+    }
+    .no-movil{
+        display: none;
+    }
+
+    .img-details{
+        margin-left: 0;
+        width: 335px;
+        height: 390px;
+    }
+
+    .btn-main{
+        padding: 7px 8px;
+        font-size: 170%;
+        border-radius: 5px;
+        width: 80vw;
+    }
+
+    .info-product{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2vh;
+        margin-left: -3vw;
+        width: 100vw;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .product-title{
+        width: 100% !important;
+        text-align: center !important;
+        font-size: 30px;
+        font-weight: bold;
+        border-bottom: 1px solid orange;
+        padding-bottom: 3vh;
+
+    }
+
+    .heigth-70vh{
+        height: 67vh;
+        max-height: 100%;
+    }
+
+    .description{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center; 
+        width: 100%;
+        border-bottom: 1px solid orange;
+        padding-bottom: 2vh;
+    }
+
+    .description h4{
+        margin-top: 1vh;
+        width: 100%;
+        font-size: 30px;
+        font-weight: bold;
+        border-top: 1px solid transparent;
+        padding-top: 3vh;
+        
+    }
+
+    .description p{
+        width: 100%;
+        text-align: center;
+        font-size: 105%;
+    }
+
+    .movil .precio{
+        font-size: 35px;
+    }
+   
+    .border-up-down{
+        border-top:  1px solid orange;
+        border-bottom:  1px solid orange;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+
+    .footer-product{
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+        text-align: center;
+    }
+
+   
+}

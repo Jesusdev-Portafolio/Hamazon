@@ -1,0 +1,161 @@
+<div class="container mt-4">
+    <div class="no-movil">
+        <div class="row">
+            <section class="col-3">
+                    <ng-container *ngIf="types && brands">
+                        <h5 class="text-warning ml-3 mt-4 mb-2">Ordenar Por</h5>
+                        <select [(ngModel)]="selected" class="custom-select mb-4 sort-reset" (change)="onSortSelected($event.target.value)" >
+                            <option *ngFor="let sort of sortOptions"
+                                [value]="sort.value"
+                            >
+                                {{sort.name}}
+                            </option>
+                        </select>
+    
+                        <h5 class="text-warning ml-3">Marcas</h5>
+                        <ul class="list-group my-3">
+                            <li class="list-group-item" 
+                                *ngFor="let brand of brands" 
+                                [class.active] = "brand.id === this.shopParams.brandId"
+                                [value]="brand.id"
+                                (click)="onBrandSelected(brand.id)"
+                            >
+                                {{brand.name}}
+                            </li>
+                        </ul>
+                        <h5 class="text-warning ml-3">Categorías</h5>
+                        <ul class="list-group my-3">
+                            <li class="list-group-item" 
+                            *ngFor="let type of types"
+                            [class.active] = "type.id === this.shopParams.typeId"
+                            [value]="type.id"
+                            (click)="onTypeSelected(type.id)"
+                            >
+                                {{type.name}}
+                            </li> 
+                        </ul>
+                </ng-container>
+            </section>
+             
+            <section class="col-9">
+                <div class="d-flex justify-content-between align-items-center pb-2">
+                    
+                    <app-paging-header
+                        [totalItems] = "totalItems"
+                        [pageSize] = "this.shopParams.pageSize"
+                        [pageNumber] = "this.shopParams.pageNumber"
+                    >
+                    </app-paging-header>
+    
+                    <div class="form-inline mt-2 margen-rigth" *ngIf="products">
+                        <input (keyup.enter)="onSearch()" class="form-control mr-2" #search type="text" placeholder="Busca tu Producto Aquí">
+                        <button (click)="onSearch()" class="btn btn-primary my2">Buscar</button>
+                        <button (click)="onReset() " class="btn btn-warning ml-1 my2"> Borrar Filtros </button>
+                    </div>
+    
+                </div>
+               
+                <div class="row">
+                    <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-3 centrado"  *ngFor="let item of products">
+                        <app-product-item [product]="item"></app-product-item>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center" *ngIf="totalItems > 0">
+                    <app-pager
+                        [pageSize]="shopParams.pageSize"
+                        [totalItems]="totalItems"
+                        [currentPage]="currentPage"
+                        (pageChanged)="onPageChange($event)"
+                    ></app-pager>
+    
+                  </div>
+                  <div class="footer">
+                      <app-footer></app-footer>
+                  </div>
+                 
+            </section>
+        </div>
+    </div>
+   
+    <div class="movil">
+        <div class="row">
+            <ng-container *ngIf="types && brands">
+                <div class="Ordenar col-4">
+                    <h5 class="filters-title-color ml-2 mt-4 mb-2 no-margin-mobile"><span>Ordenar</span></h5>
+                    <select [(ngModel)]="selected" class="custom-select mb-4 margin-mobile-filters sort-reset" (change)="onSortSelected($event.target.value)" >
+                        <option *ngFor="let sort of sortOptions"
+                            [value]="sort.value"
+                        >
+                            {{sort.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="Marcas col-4">
+                    <h5 class="filters-title-color ml-2"><span>Marcas</span></h5>
+                    <select class="my-3 custom-select margin-mobile-filters"(change)="onBrandSelected($event.target.value)">
+                        <option class="list-group-item" 
+                            *ngFor="let brand of brands" 
+                            [class.active] = "brand.id === this.shopParams.brandId"
+                            [value]="brand.id"
+                            [selected] = "brand.id === this.shopParams.brandId"
+                        >
+                            {{brand.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="Tipos col-4">
+                    <h5 class="filters-title-color ml-3"><span>Categ</span></h5>
+                    <select class="my-3 custom-select margin-mobile-filters" (change)="onTypeSelected($event.target.value)">
+                        <option class="list-group-item" 
+                        *ngFor="let type of types"
+                        [class.active] = "type.id === this.shopParams.typeId"
+                        [selected] = "type.id === this.shopParams.typeId"
+                        [value]="type.id"
+                        >
+                            {{type.name}}
+                    </option> 
+                </select>
+                </div>       
+            </ng-container>
+        </div>
+         <div class="row">
+             <div class="col-12">
+                <input (keyup.enter)="onSearch()" class="form-control mr-2 mt-2" #searchMobile type="text" placeholder="Busca tu Producto Aquí">
+             </div>
+        </div>
+        <div class="row">
+                    <button (click)="onSearch()" class="btn btn-primary mt-2 mx-auto col-6 btn-main">Buscar</button>
+                    <button (click)="onReset() " class="btn btn-warning mt-2 mx-auto my2 col-6 btn-main"> Borrar Filtros</button>
+        </div>
+        <div class="row">
+            <section class="col-12">
+                <div class="d-flex mt-1 justify-content-center align-items-center pb-2">
+                    <app-paging-header
+                        [totalItems] = "totalItems"
+                        [pageSize] = "this.shopParams.pageSize"
+                        [pageNumber] = "this.shopParams.pageNumber"
+                    >
+                    </app-paging-header>
+                </div>
+            </section>
+        </div>
+         <section class="col-12">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3 centrado"  *ngFor="let item of products">
+                        <app-product-item [product]="item"></app-product-item>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center" *ngIf="totalItems > 0">
+                        <app-pager
+                        [pageSize]="shopParams.pageSize"
+                        [currentPage]="currentPage"
+                        [totalItems]="totalItems"
+                        (pageChanged)="onPageChange($event)" 
+                    ></app-pager>
+                  </div>
+                  <div class="footer">
+                    <app-footer></app-footer>
+                </div>
+            </section>
+    </div> 
+</div>

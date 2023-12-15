@@ -1,0 +1,167 @@
+.featured{
+    height: 250px;
+
+}
+
+img{
+    object-fit:cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.blur-img{
+    filter: blur(2px) brightness(60%);
+    width: 105%;
+    overflow: hidden;
+    margin-left: -10px;
+}
+
+:host ::ng-deep {
+    .carousel-control {
+        display: none;
+     }
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    width: 100vw;
+    max-width: 100vw;
+    margin-top: -65vh;
+}
+
+.content h1{
+    color: white;
+    font-weight: 700;
+}
+
+.content h1 span{
+    color: orange;
+}
+
+.content h3{
+    color: white;
+}
+
+.main h3 span, .join-us h3 span, .info h3 span{
+    border-bottom: 1.5px solid orange;
+    border-top: 1.5px solid orange;
+}
+
+
+.join-us h1{
+    font-size: 5.5em;
+    font-weight: 700 !important;
+    color: white;
+}
+
+.join-us h3{
+    font-size: 1.7em;
+    color: white;
+    margin-bottom: 2vh;
+}
+
+.join-us h4{
+    font-size: 1.4em;
+    color: white;
+}
+
+.logo-decorator{
+    width: 285px;
+    height: 65px;
+}
+
+.footer{
+    margin-top: -5vh;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+}
+
+.btn-carousel{
+    background-color:#1178db;
+    color:white;
+    border: 2px solid #1178db;
+    
+    &:hover{
+        background-color: #34aaff;
+        color: white;
+        border: 2px solid orange;
+    }
+}
+
+@media (max-width: 2560px){
+    .content h1{
+        font-size: 5.5em;
+    }
+    .content h3{
+        font-size: 1.7em;
+    }
+
+    .btn-carousel{
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 1280px){
+    .content h1{
+        font-size: 5em;
+    }
+    .content h3{
+        font-size: 1.5em;
+    }
+    .btn-carousel{
+        font-size: 14px;
+    }
+}
+
+
+
+@media (max-width: 600px){
+    .content h1{
+        font-size: 3.5em;
+    }
+    .content h3{
+        font-size: 1.4em;
+    }
+
+    .btn-carousel{
+        font-size: 14px;
+    }
+
+    .content{
+        margin-top: -65vh;
+    }
+    .logo-decorator{
+        width: 200px;
+        height: 45px;
+    }
+    .footer{
+        margin-top: -8vh;
+    }
+}
+
+@media (max-width: 350px){
+    .content h1{
+        font-size: 2.8em;
+    }
+    .content h3{
+        font-size: 1.2em;
+    }
+
+    .btn-carousel{
+        font-size: 13px;
+    }
+
+    .content{
+        margin-top: -65vh;
+    }
+    .logo-decorator{
+        width: 200px;
+        height: 45px;
+    }
+}

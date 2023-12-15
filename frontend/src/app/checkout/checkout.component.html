@@ -1,0 +1,24 @@
+<div *ngIf="(basket$ | async) !== null">
+    <div class="container d-flex flex-column align-items-center pagar-cont">
+        <h1 class="h2 title-border">Confirmar Compra</h1>
+        <h3 class="h4"><strong>{{(currentUser$ | async).displayName}}</strong>, está a punto de realizar una compra falsa por {{((basketTotals$ | async).total * 1.05 ) | currency:'EUR':'symbol'}}</h3>
+        <div class="btn-pagar">
+            <a (click)="pagar(this.basket)" class="btn btn-primary btn-size margin-2"  routerLink="/">Pagar</a>
+            <a class="btn btn-warning btn-size" routerLink="/tienda">Volver a Tienda</a>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="(basket$ | async) === null">
+    <div class="container d-flex flex-column align-items-center pagar-cont">
+        <h1 class="h2 title-border">Cesta Sin Productos</h1>
+        <h3 class="h4"><strong>{{(currentUser$ | async).displayName}}</strong>, tienes que agregar productos en la cesta para poder realizar una compra</h3>
+        <a class="btn btn-primary btn-size" routerLink="/tienda">Ir a la Tienda</a>
+    </div>
+</div>
+
+<div class="pagar-footer">
+    <app-footer></app-footer>
+</div>
+   
+

@@ -1,0 +1,17 @@
+<header>
+    <span *ngIf="totalItems && totalItems > 0">
+         Mostrando 
+        <strong>
+             {{(pageNumber -1) * pageSize +1}} -
+             {{pageNumber * pageSize
+                > this.totalItems 
+                ? this.totalItems 
+                : pageNumber * pageSize 
+            }}
+         </strong> 
+         de <strong> {{this.totalItems}} </strong> Resultados
+     </span>
+     <span *ngIf="totalItems === 0">
+          Tenemos <strong>0</strong> Resultados de estos Filtros 
+     </span>
+</header>
