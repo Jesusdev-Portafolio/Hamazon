@@ -1,10 +1,3 @@
- <link href="readme_img/readme.css" rel="stylesheet"></link>
-
-
-# Proyecto de Final de Ciclo DAW
-
-  
-
 ## Aplicación web - Tienda de Artículos Electrónicos - Hamazon
 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; background-color: rgba(255,255,255,0.05); padding-top:40px;padding-bottom:40px">
@@ -49,18 +42,11 @@
 </div>
 
   
-
  3. ### Despliegue:
 
    <div style="background-color:gray"> 
     
-    - Digital Ocean (Hosting)
-   
-    - Apache (ApyGateway)
-    
-    - CertBot (SSL)
-     
-    - Freenom
+    - Firestore
 
 </div>
 
