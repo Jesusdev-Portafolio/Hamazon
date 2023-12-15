@@ -77,8 +77,8 @@
 
 <div style=" display: flex; justify-content: center; align-items: center; margin-top:10px; background-color:rgba(255,255,255,0.05); flex-wrap:wrap; padding-top: 40px; padding-bottom:40px;">
 
-  <img src="readme_img/Hamazon_home_mobile.png" alt="Hamazon_Home" style="border:1px solid black; height:300px;margin:15px"/>
-  <img src="readme_img/Hamazon_tienda_mobile.png" alt="Hamazon_Tienda" style="border:1px solid black; height:300px;margin:15px"/>
+  <img src="readme_img/Hamazon_Home_mobile.png" alt="Hamazon_Home" style="border:1px solid black; height:300px;margin:15px"/>
+  <img src="readme_img/Hamazon_Tienda_mobile.png" alt="Hamazon_Tienda" style="border:1px solid black; height:300px;margin:15px"/>
   <img src="readme_img/Hamazon_carrito_mobile.png" alt="Hamazon_Carrito" style="border:1px solid black; height:300px;margin:15px"/>
 
 </div>
