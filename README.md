@@ -14,6 +14,10 @@
    <div style="background-color:gray"> 
    
     - ASP.NET Core v6
+
+    - PostGreSQL
+
+    - Redis 
     
     - Swagger
     
@@ -24,7 +28,7 @@
     - C# 
 </div>
 
- 2. ### Frontend
+ 1. ### Frontend
    <div style="background-color:gray"> 
     
     - Angular v12
@@ -46,7 +50,11 @@
 
    <div style="background-color:gray"> 
     
-    - Firestore
+    - Firestore (AngularApp)
+  
+    - Neon (PostgreSQL ProductosDb - Usuarios Db)
+
+    - RedisLab (RedisDb - ShoppingCart)
 
 </div>
 

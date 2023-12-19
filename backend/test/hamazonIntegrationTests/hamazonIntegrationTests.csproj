@@ -17,84 +17,6 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Huawei_freebuds-lipstick-red.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Huawei_Freebuds_Pro.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Huawei_Nova_9_SE_Phone_Case.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Huawei_P50Pro.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Huawei_P50ProCase.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\huawei_p_smart_2021.jpg">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\lg_cascos_freeF6.jpg">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Lg_k50.jpg">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Lg_Q60_PhoneCase.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\LG_Velvet_PhoneCase.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\motorola_edge30Pro.jpg">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Nokia_18WWallChargerEU.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Nokia_Clarity_EardBuds.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Nokia_Fast_Wall_Charger_18W_TypeC.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Nokia_G21.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Nokia_XR20.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Samsung_Adaptive_FastCharging_WallCharger.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\samsung_cascos.jpg">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\samsung_galaxy_s21.jpg">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Samsung_S21.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Samsung_WirelessCharger_TrioWhite.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Samsung_ZFlip.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Xiaomi_12Pro.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\xiaomi_airdrots2.jpg">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\Xiaomi_Mi_65W_Fast_Charger.png">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="bin\Debug\net6.0\Content\images\products\xiaomi_redmi_10.jpg">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -114,8 +36,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\API\API.csproj" />
-    <ProjectReference Include="..\Infraestructure\Infraestructure.csproj" />
+    <ProjectReference Include="..\..\API\API.csproj" />
+    <ProjectReference Include="..\..\Infraestructure\Infraestructure.csproj" />
   </ItemGroup>
 
 </Project>
