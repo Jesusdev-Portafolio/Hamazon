@@ -1,0 +1,30 @@
+[
+  {
+    "Id": 1,
+    "ShortName": "UPS1",
+    "Description": "El envio mas rapido",
+    "DeliveryTime": "1-2 Dias",
+    "Price": 10
+  },
+  {
+    "Id": 2,
+    "ShortName": "UPS2",
+    "Description": "Obten tu pedido en máximo 5 dias",
+    "DeliveryTime": "2-5 Dias",
+    "Price": 5
+  },
+  {
+    "Id": 3,
+    "ShortName": "UPS3",
+    "Description": "Ideal si no te molesta esperar un poco",
+    "DeliveryTime": "5-10 Dias",
+    "Price": 2
+  },
+  {
+    "Id": 4,
+    "ShortName": "Gratis",
+    "Description": "Gratis! Envio a 0 costo",
+    "DeliveryTime": "1-2 Semanas",
+    "Price": 0
+  }
+]

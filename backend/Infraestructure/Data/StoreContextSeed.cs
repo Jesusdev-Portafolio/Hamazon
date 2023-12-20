@@ -1,4 +1,5 @@
 ﻿using Core.Entities;
+using Core.Entities.OrderAggregate;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -17,37 +18,36 @@ namespace Infraestructure.Data
             try
             {
                 var ruta = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
                 if (!context.ProductBrands.Any())
                 {
                     var brandsData = File.ReadAllText(ruta + @"/Data/SeedData/brands.json");
                     var brands = JsonSerializer.Deserialize<List<ProductBrand>>(brandsData);
-                    foreach (var item in brands)
-                    {
-                        context.ProductBrands.Add(item);
-                    }
-                    await context.SaveChangesAsync();
+                    context.AddRange(brands);
                 }
 
                 if (!context.ProductTypes.Any())
                 {
                     var typesData = File.ReadAllText(ruta + @"/Data/SeedData/types.json");
                     var types = JsonSerializer.Deserialize<List<ProductType>>(typesData);
-                    foreach (var item in types)
-                    {
-                        context.ProductTypes.Add(item);
-                    }
-                    await context.SaveChangesAsync();
+                    context.AddRange(types);
                 }
+
                 if (!context.Products.Any())
                 {
                     var productsData = File.ReadAllText(ruta + @"/Data/SeedData/products.json");
                     var products = JsonSerializer.Deserialize<List<Product>>(productsData);
-                    foreach (var item in products)
-                    {
-                        context.Products.Add(item);
-                    }
-                    await context.SaveChangesAsync();
+                    context.AddRange(products);
                 }
+
+                if (!context.DeliveryMethods.Any())
+                {
+                    var deliveryData = File.ReadAllText(ruta + @"/Data/SeedData/delivery.json");
+                    var methods = JsonSerializer.Deserialize<List<DeliveryMethod>>(deliveryData);
+                    context.AddRange(methods);
+                }
+
+                if (context.ChangeTracker.HasChanges()) await context.SaveChangesAsync();
             }
             catch(Exception ex)
             {
