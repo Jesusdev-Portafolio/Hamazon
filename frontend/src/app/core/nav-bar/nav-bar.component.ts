@@ -15,6 +15,8 @@ export class NavBarComponent implements OnInit {
   basket$: Observable<IBasket>;
   currentUser$: Observable<IUser>;
 
+  //TODO: verificar si tiene productos en el carrito al realizar compra boton si no tiene mandarlo a la tienda si tiene mandarlo al pago.
+
   constructor(private basketService:BasketService, private accountService: AccountService) { }
 
   ngOnInit(): void {

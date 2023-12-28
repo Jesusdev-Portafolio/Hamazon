@@ -13,6 +13,8 @@ export class CheckoutDeliveryComponent implements OnInit {
 @Input () checkoutForm?: FormGroup;
 deliveryMethods: DeliveryMethod[] = [];
 
+//TODO: si no selecciono el shipping da error pero cuando lo ponga linear habra que seleccionarlo si o si
+
   constructor(private checkoutService: CheckoutService, private basketService : BasketService) { }
 
   ngOnInit(): void {

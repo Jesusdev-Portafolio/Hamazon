@@ -16,7 +16,7 @@
         <a data-toggle="collapse" data-target=".navbar-collapse.show" class="p-2" routerLink="/contacto" routerLinkActive ='active'>Contacto</a> 
       </li>
     </ul>
-     <a data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/basket" class="position-relative"> 
+     <a data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/cesta" class="position-relative"> 
           <i class="fa fa-shopping-cart fa-4x mr-4 carrito"></i>
           <div *ngIf="(basket$ | async)" class="cart-no">{{(basket$ | async).items.length}}</div>
       </a>
@@ -33,11 +33,11 @@
             <strong class="user-name">{{(currentUser$ | async).displayName}}</strong>
          </a>
          <div class="dropdown-menu dropdown-menu-right" style="cursor:pointer;" *dropdownMenu>
-          <a data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/basket" class="dropdown-item d-flex align-items-center py-2">
+          <a data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/cesta" class="dropdown-item d-flex align-items-center py-2">
             <i class="fa fa-shopping-cart mr-3"></i> Ver Carrito
           </a>
-          <a data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/checkout" class="dropdown-item d-flex align-items-center py-2">
-            <i class="fa fa-history mr-3"></i> Realizar Compra
+          <a data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/pedidos" class="dropdown-item d-flex align-items-center py-2">
+            <i class="fa fa-list mr-3"></i> Ver Pedidos
           </a>
           <div class="dropdown-divider"></div>
           <a data-toggle="collapse" data-target=".navbar-collapse.show" (click)="logout()" class="dropdown-item d-flex align-items-center py-2">

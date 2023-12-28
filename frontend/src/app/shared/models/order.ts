@@ -14,7 +14,7 @@ export interface Order {
     deliveryMethod: string
     shippingPrice: number
     orderItems: OrderItem[]
-    subTotal: number
+    subtotal: number
     total: number
     status: string
   }
