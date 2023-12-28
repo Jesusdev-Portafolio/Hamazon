@@ -10,15 +10,13 @@
         <strong>{{(basketTotals$ | async).subtotal | currency:'EUR':'symbol'}}</strong>
       </li>
       <li class="d-flex justify-content-between py-3 border-bottom">
-        <strong class="text-muted">Comisión al Desarrollador (5%) <span style="color: red;">*</span></strong>
-        <strong>{{((basketTotals$ | async).total * 0.05) | currency:'EUR':'symbol'}}</strong>
+        <strong class="text-muted">Gastos de Envío </strong>
+        <strong>{{ (basketTotals$ | async).shipping | currency:'EUR':'symbol'}}</strong>
       </li>
       <li class="d-flex justify-content-between py-3 border-bottom mb-1">
         <strong class="text-muted">Total</strong>
-        <strong>{{((basketTotals$ | async).total * 1.05) | currency:'EUR':'symbol'}}</strong>
+        <strong>{{((basketTotals$ | async).total) | currency:'EUR':'symbol'}}</strong>
       </li>
-      <p> <span style="color:red;">*</span><i style="opacity:.4;border-bottom:1px solid red">Si te Quejas lo subo a
-          10%</i></p>
     </ul>
   </div>
 </div>

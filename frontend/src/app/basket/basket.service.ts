@@ -5,6 +5,7 @@ import { BehaviorSubject, map } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Basket, IBasket, IBasketItem, IBasketTotals } from '../shared/models/basket';
 import { IProduct } from '../shared/models/product';
+import { DeliveryMethod } from '../shared/models/deliveryMethod';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +17,14 @@ export class BasketService {
   private basketTotalSource = new BehaviorSubject<IBasketTotals>(null);
   basket$ = this.basketSource.asObservable();
   basketTotal$ = this.basketTotalSource.asObservable();
+  shipping = 0;
 
   constructor(private http: HttpClient) { }
+
+  setShipingPrice(deliveryMethod: DeliveryMethod){
+    this.shipping = deliveryMethod.price;
+    this.calculateTotals();
+  }
 
   getBasket(id:string){
     return this.http.get(this.baseUrl + 'basket?id=' + id)
@@ -79,13 +86,21 @@ export class BasketService {
     }
   }
   deleteBasket(basket: IBasket) {
-    return this.http.delete(this.baseUrl + 'basket?id=' + basket.id).subscribe(() => {
-      this.basketSource.next(null);
-      this.basketTotalSource.next(null);
-      localStorage.removeItem('basket_id');
-    },error => {
-      console.log(error);
-    });
+    return this.http.delete(this.baseUrl + 'basket?id=' + basket.id).subscribe({
+      next: ()  => {
+        this.deleteLocalBasket();
+      },
+      error : (error) => {
+        console.log(error);
+     }
+  });
+  }
+
+  deleteLocalBasket(){
+    //despues que creo la order borro el basket desde el backend pero tengo que borrarlo aqui desde el localStorage
+    this.basketSource.next(null);
+    this.basketTotalSource.next(null);
+    localStorage.removeItem('basket_id');
   }
 
   private addOrUpdateItem(items: IBasketItem[], itemToAdd: IBasketItem, quantity: number): IBasketItem[] {
@@ -119,10 +134,9 @@ export class BasketService {
 
   private calculateTotals(){
     const basket = this.getCurrentBasketValue();
-    const shipping = 0;
     const subtotal = basket.items.reduce((a,b) => (b.price * b.quantity) + a,0);
-    const total = subtotal + shipping;
-    this.basketTotalSource.next({shipping, total, subtotal});
+    const total = subtotal + this.shipping;
+    this.basketTotalSource.next({shipping: this.shipping, total, subtotal});
 
 
   }

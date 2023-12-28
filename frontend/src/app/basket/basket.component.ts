@@ -21,6 +21,7 @@ export class BasketComponent implements OnInit {
   }
 
   removeBasketItem(item:IBasketItem){
+    console.log(item);
     this.basketService.removeItemFromBasket(item);
     const timer$ = timer(150);
     timer$.subscribe((n) =>{

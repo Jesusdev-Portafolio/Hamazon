@@ -1,0 +1,42 @@
+<div class="mt-4" *ngIf="checkoutForm" [formGroup]="checkoutForm">
+    <div class="d-flex justify-content-between align-item-center">
+        <h4>Direccion de Envio</h4>
+        <button class="btn btn-outline-success mb-3" 
+            (click)="saveUserAddress()"
+            [disabled]="!checkoutForm.get('addressForm')?.valid || 
+                !checkoutForm.get('addressForm')?.dirty"
+            >
+            Save as defaul address
+        </button>
+    </div>
+    <div class="row" formGroupName="addressForm">
+        <div class="form-group col-6">
+            <app-text-input [label]="'Nombre'" formControlName="firstName"></app-text-input>
+        </div>
+        <div class="form-group col-6">
+            <app-text-input [label]="'Apellido'" formControlName="lastName"></app-text-input>
+        </div>
+        <div class="form-group col-6">
+            <app-text-input [label]="'Calle'" formControlName="street"></app-text-input>
+        </div>
+        <div class="form-group col-6">
+            <app-text-input [label]="'Ciudad'" formControlName="city"></app-text-input>
+        </div>
+        <div class="form-group col-6">
+            <app-text-input [label]="'Provincia'" formControlName="state"></app-text-input>
+        </div>
+        <div class="form-group col-6">
+            <app-text-input [label]="'Codigo Postal'" formControlName="zipcode"></app-text-input>
+        </div>
+            
+    </div>
+</div>
+
+<div class="d-flex justify-content-between flex-row mb-5">
+    <button class="btn btn-outline-primary" routerLink="/basket">
+        <i class="fa fa-angle-left"></i> Volver al carrito
+    </button>
+    <button class="btn btn-primary" cdkStepperNext>
+        Ir a Envio <i class="fa fa-angle-right"></i>
+    </button>
+</div>

@@ -17,6 +17,7 @@ import { HomeModule } from './home/home.module';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
+import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
 
 
 @NgModule({
@@ -34,12 +35,11 @@ import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
    NgxSpinnerModule
   ],
   //esto es lo de los euros y para ponerlo a la derecha porque por defecto viene a la izquierda
-  providers: [{
-    provide: LOCALE_ID,
-    useValue: 'de-DE' 
-  },
+  providers: [
+  {provide: LOCALE_ID, useValue: 'de-DE' },
   {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
-  {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
+  {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true},
+  {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
 
 ],
   bootstrap: [AppComponent]
