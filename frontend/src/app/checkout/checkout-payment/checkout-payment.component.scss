@@ -1,0 +1,12 @@
+.card-brand{
+    height: 50px;
+    cursor: pointer;
+    border: 1.5px solid #2c3e50;
+    border-radius: 7px;
+    transition: .5s;
+   
+}
+
+.card-brand:hover{
+    background-color: rgba(255,165,0,.6);
+}

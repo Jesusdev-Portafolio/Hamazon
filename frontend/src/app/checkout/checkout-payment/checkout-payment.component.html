@@ -1,4 +1,68 @@
-<p>checkout-payment works!</p>
+<div class="row">
+    <div class="col-md-8 col-sm-12">
+        <div class="mt-4 mb-3 d-flex justify-content-center">
+            <app-checkout-card
+                [brand]="cardBrand"
+                [flip]="flip"
+                [checkoutForm]="checkoutForm"
+                >
+            </app-checkout-card>            
+        </div>
+
+    </div>
+    <div class="col-md-4 col-sm-12">
+        <div class=" mt-4 d-flex justify-content-center">
+            <img 
+                class="card-brand mx-2" 
+                src="../../../assets/images/card/visa-logo.png" 
+                alt="visa-logo"
+                (click)="changeCardBrand('visa-logo')" >
+            <img 
+             class="card-brand mx-2"
+             src="../../../assets/images/card/mastercard-logo.png"
+              alt="mastercard-logo"
+              (click)="changeCardBrand('mastercard-logo')">
+
+        </div> 
+        <div class="d-flex justify-content-center mt-4 mb-3">
+            <button class="btn btn-primary" (click)="flipper()">Girar</button>
+        </div>   
+   
+    </div>
+</div>
+
+
+
+<!-- <div class="mt-4" *ngIf="checkoutForm" [formGroup]="checkoutForm">
+    <div class="row">
+        <div class="form-group col-12" formGroupName="paymentForm">
+            <app-text-input [label]="'Name on card'" formControlName="nameOnCard"></app-text-input>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-6">
+            <div class="form-floating">
+                <div class="form-control" #cardNumber></div>
+                <label>Card Number</label>
+                <span class="text-danger">{{cardErrors}}</span>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-floating">
+                <div class="form-control" #cardExpiry></div>
+                <label>Card Expiry</label>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-floating">
+                <div class="form-control" #cardCvc></div>
+                <label>Card Cvc</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+-->
 
 <div class="d-flex justify-content-between flex-row mb-5">
     <button class="btn btn-outline-primary" cdkStepperPrevious>
@@ -8,3 +72,4 @@
         Pagar <i class="fa fa-angle-right"></i>
     </button>
 </div>
+

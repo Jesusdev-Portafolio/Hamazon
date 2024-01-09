@@ -1,0 +1,31 @@
+<div class="mt-4" *ngIf="checkoutForm" [formGroup]="checkoutForm">
+  <div class="row" formGroupName="paymentForm">
+    <div class="flip-card" [class.flip]="flip">
+      <div class="flip-card-inner">
+        <div class="flip-card-front bg">
+          <img class="card-square" src="../../../assets/images/card/Banking-PNG.png">
+          <img class="card-logo card-front-logo" src="../../../assets/images/card/{{cardLogo}}.png">
+          <app-text-input [card]="true" [label]="'Numero de Tarjeta'" formControlName="numberOnCard"></app-text-input>
+          <div class="card-holder">
+            <app-text-input [card]="true" [label]="'Sr(a)'" formControlName="nameOnCard" ></app-text-input>
+          </div>
+          <div class="card-expires">
+            <app-text-input [card]="true" [label]="'Vence'" formControlName="expiresCard" ></app-text-input>
+          </div>      
+        </div>
+        <div class="flip-card-back bg">
+          <div class="card-black-line"></div>
+          <div class="card-back-content">
+            <div class="card-secret">
+              <div class="card-secret-last">
+                <app-text-input [cvv]="true" [label]="'cvv'" formControlName="cvv" ></app-text-input>
+              </div>
+            </div>
+            <img class="card-square card-back-square" src="../../../assets/images/card/Banking-PNG.png">
+                  <img class="card-logo card-back-logo" src="../../../assets/images/card/{{cardLogo}}.png">
+          </div>
+        </div>
+      </div>
+    </div> 
+</div>
+

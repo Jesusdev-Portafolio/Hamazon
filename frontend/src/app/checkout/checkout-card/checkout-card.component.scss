@@ -1,0 +1,150 @@
+.bg {
+    background: rgba(76,76,76,1);
+    background: -moz-linear-gradient(-45deg, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 45%, rgba(0,0,0,1) 55%, rgba(17,17,17,1) 70%, rgba(43,43,43,1) 77%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(76,76,76,1)), color-stop(12%, rgba(89,89,89,1)), color-stop(25%, rgba(102,102,102,1)), color-stop(39%, rgba(71,71,71,1)), color-stop(45%, rgba(44,44,44,1)), color-stop(55%, rgba(0,0,0,1)), color-stop(70%, rgba(17,17,17,1)), color-stop(77%, rgba(43,43,43,1)), color-stop(91%, rgba(28,28,28,1)), color-stop(100%, rgba(19,19,19,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 45%, rgba(0,0,0,1) 55%, rgba(17,17,17,1) 70%, rgba(43,43,43,1) 77%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 45%, rgba(0,0,0,1) 55%, rgba(17,17,17,1) 70%, rgba(43,43,43,1) 77%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 45%, rgba(0,0,0,1) 55%, rgba(17,17,17,1) 70%, rgba(43,43,43,1) 77%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: linear-gradient(135deg, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 45%, rgba(0,0,0,1) 55%, rgba(17,17,17,1) 70%, rgba(43,43,43,1) 77%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 );
+  }    
+  
+  .card-black-line {
+      margin-top: 5px;
+      height: 38px;
+      background-color: #303030;
+  }
+  
+  .card-numer {
+      display: block;
+      width: 100%;
+      word-spacing: 4px;
+      font-size: 20px;
+      letter-spacing: 2px;
+      color: #fff;
+      margin-bottom: 20px;
+      margin-top: 20px;
+  }  
+  
+  .card-logo {
+    height: 32px;
+    width: 45px;
+  }
+  
+  .card-front-logo {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+  }    
+  
+  .card-square {
+    border-radius: 5px;
+    height: 30px;
+  }
+  
+  .card-back-square {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+  }
+  
+  .card-back-logo {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+  }
+  
+  .flip-card {
+    background-color: transparent;
+    width: 320px;
+    height: 190px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+  }
+  
+  .flip-card.flip .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    padding: 18px;
+  }
+  
+  .flip-card-back {
+    padding: 18px 0;
+    transform: rotateY(180deg);
+  }
+  
+  .card-secret {
+      padding: 5px 12px;
+      background-color: transparent;
+      position: relative;
+  }
+  
+  .card-secret:before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      height: calc(100% + 6px);
+      width: calc(100% - 42px);
+      border-radius: 4px;
+      background: repeating-linear-gradient(45deg, #ededed, #ededed 5px, #f9f9f9 5px, #f9f9f9 10px);
+  }
+  
+  .card-secret-last {
+    color: #303030;
+      text-align: right;
+      margin: 0;
+      font-size: 14px;
+  }
+  
+  .card-back-content {
+    padding: 15px 15px 0;
+  }
+  
+  .card-holder {
+      width: 60%;
+      float: left;
+  }
+  
+  .card-info {
+      margin-bottom: 0;
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 18px;
+      color: #fff;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+  }
+  
+  .card-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 1px;
+  }
+  
+  .card-expires {
+    width: 40%;
+    float: left;
+  }

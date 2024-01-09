@@ -10,6 +10,8 @@ export class TextInputComponent implements OnInit, ControlValueAccessor {
   @ViewChild('input', {static: true}) input: ElementRef;
   @Input() type = 'text';
   @Input() label = 'string';
+  @Input() card = false; //this 2 are only for input styling
+  @Input() cvv = false;
 
   constructor(@Self() public controlDir: NgControl) { 
     this.controlDir.valueAccessor = this;
@@ -23,6 +25,7 @@ export class TextInputComponent implements OnInit, ControlValueAccessor {
     control.setValidators(validators);
     control.setAsyncValidators(asyncValidators);
     control.updateValueAndValidity();
+
   }
 
   onChange(event) {}

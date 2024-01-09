@@ -11,6 +11,7 @@ import { CheckoutDeliveryComponent } from './checkout-delivery/checkout-delivery
 import { CheckoutPaymentComponent } from './checkout-payment/checkout-payment.component';
 import { CheckoutSuccessComponent } from './checkout-success/checkout-success.component';
 import { CheckoutReviewComponent } from './checkout-review/checkout-review.component';
+import { CheckoutCardComponent } from './checkout-card/checkout-card.component';
 
 
 
@@ -21,7 +22,8 @@ import { CheckoutReviewComponent } from './checkout-review/checkout-review.compo
     CheckoutDeliveryComponent,
     CheckoutPaymentComponent,
     CheckoutSuccessComponent,
-    CheckoutReviewComponent
+    CheckoutReviewComponent,
+    CheckoutCardComponent
   ],
   imports: [
     CommonModule,

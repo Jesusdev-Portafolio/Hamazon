@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BreadcrumbService } from 'xng-breadcrumb';
 import { OrderService } from '../order.service';
-import { Order } from 'src/app/shared/models/Order';
+import { Order } from 'src/app/shared/models/order';
 
 @Component({
   selector: 'app-order-detailed',
@@ -28,7 +28,7 @@ export class OrderDetailedComponent implements OnInit {
     this.orderService.getOrderById(orderId).subscribe({
       next: ( order ) => {
         this.order = order;
-        this.bcService.set('@pedidoId', orderId.toString() + "-" + order.orderDate);
+        this.bcService.set('@pedidoId', orderId.toString());
         console.log(order);
       }
     })

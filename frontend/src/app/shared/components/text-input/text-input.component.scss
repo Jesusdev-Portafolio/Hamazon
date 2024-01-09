@@ -121,3 +121,45 @@
     right: 10px;
     margin-top: 0;
   }
+
+  //custom css for label when its on credit card
+  .card-input input{
+    color: #fff;
+    background-color: transparent;
+    border: 0px;
+    text-transform:uppercase;
+  }
+  
+  .card-input label{
+    color: #ddd !important;
+  }
+  
+  .card-cvv {
+  
+  }
+  
+  .card-cvv::before{
+   
+  }
+  
+  .card-cvv input{
+    width: 50px;
+    max-height: 35px !important;
+    color: #303030;
+    text-align: right;
+    margin: 0;
+    font-size: 14px;
+    position: absolute;
+    right: -20px;
+    top: -25px;
+    text-transform: uppercase;
+    
+  }
+  
+  .card-cvv label{
+   position: absolute;
+   top: -30px;
+   left: 10px;
+  }
+  
+

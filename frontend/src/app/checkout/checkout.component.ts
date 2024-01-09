@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Observable, timer } from 'rxjs';
 import { AccountService } from '../account/account.service';
@@ -16,10 +16,13 @@ import { validate } from 'uuid';
 
 export class CheckoutComponent implements OnInit {
  
-  constructor(private fb: FormBuilder, private accountService: AccountService) { }
+  constructor(private fb: FormBuilder, private accountService: AccountService, private basketService: BasketService) {}
 
   ngOnInit(): void {
     this.getAddresFromValues();
+    setTimeout(() => this.getDeliveryMethodValue(), 200); //esto es por si refresca dentro del modulo de checkout, mientras se hace el suscribe
+                                                          // el metodo de getDeliveryMethod llama al source pero como aun no ha completado el suscribe llega nulo
+                                                          //asi que toca esperar cochinamente 2 decimas de segundo para darle tiempo, seguro hay otra forma mejor.
    }
 
   checkoutForm = this.fb.group({
@@ -38,7 +41,11 @@ export class CheckoutComponent implements OnInit {
     }),
     
     paymentForm: this.fb.group({
-      nameOnCard: ['', Validators.required]
+      nameOnCard   :  ["Jhon Doe"],
+      numberOnCard :  ["000 - TEST - 000"],
+      expiresCard  :  ["MM/YYYY"],
+      cvv          :  [123] 
+      
     })
   })
 
@@ -49,6 +56,15 @@ export class CheckoutComponent implements OnInit {
         address && this.checkoutForm.get('addressForm')?.patchValue(address);
       }
     })
+  }
+
+   getDeliveryMethodValue() {
+    const basket = this.basketService.getCurrentBasketValue();
+    console.log(basket);
+    if (basket && basket.deliveryMethodId) {
+      this.checkoutForm.get('deliveryForm')?.get('deliveryMethod')
+        ?.patchValue(basket.deliveryMethodId.toString());
+    }
   }
  
 

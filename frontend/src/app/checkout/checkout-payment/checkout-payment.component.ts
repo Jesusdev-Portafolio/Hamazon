@@ -15,6 +15,7 @@ import { Router, NavigationExtras, Navigation } from '@angular/router';
 export class CheckoutPaymentComponent implements OnInit {
 @Input() checkoutForm?: FormGroup;
 
+  cardBrand = "mastercard-logo"
   constructor(private basketService: BasketService, private checkoutService: CheckoutService, 
               private toastr: ToastrService, private router: Router) { }
 
@@ -50,5 +51,20 @@ export class CheckoutPaymentComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  //card funcionality
+
+  flip = false;
+
+  changeCardBrand(brand: string){
+    this.cardBrand = brand;
+  }
+ 
+
+  flipper() {
+    this.flip = !this.flip;
+  }
+
+ 
 
 }
