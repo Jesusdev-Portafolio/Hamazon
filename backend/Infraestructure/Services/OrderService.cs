@@ -1,11 +1,8 @@
 ﻿using Core.Entities;
 using Core.Entities.OrderAggregate;
 using Core.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+//using StackExchange.Redis;
+
 
 namespace Infraestructure.Services
 {
@@ -70,9 +67,32 @@ namespace Infraestructure.Services
             return await _orderRepository.GetOrderAsync(id, buyerEmail);
         }
 
-        public async Task<IReadOnlyList<Order>> GetOrdersForUserAsync(string buyerEmail)
+        public async Task<IReadOnlyList<Order>> GetOrdersForUserAsync(string buyerEmail, string orderBy, string ascDesc)
         {
-              return await _orderRepository.GetOrdersByEmailAsync(buyerEmail);
+            orderBy = orderBy.ToLower();
+            ascDesc = ascDesc.ToLower();
+            orderBy = orderBy != "date" && orderBy != "price" && orderBy != "none" ? "none" : orderBy;
+            ascDesc = ascDesc != "desc" && ascDesc != "asc" && ascDesc != "none" ? "none" : ascDesc;
+
+            var orders = await _orderRepository.GetOrdersByEmailAsync(buyerEmail);
+
+            if (orderBy is "none" && ascDesc is "none") return orders;
+
+            Func<Order, object> orderByFunc = null;
+            if (orderBy == "date")
+                orderByFunc = o => o.OrderDate;
+            else orderByFunc = o => o.GetTotal();
+
+            switch (ascDesc)
+            {
+                case "desc":
+                    return orders.OrderByDescending(orderByFunc).ToList();
+              
+                default:
+                    return orders.OrderBy(orderByFunc).ToList();
+            }
+
+
         }
     }
 }

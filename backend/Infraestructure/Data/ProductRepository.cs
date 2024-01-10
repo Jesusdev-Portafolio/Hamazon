@@ -36,7 +36,7 @@ namespace Infraestructure.Data
             orderBy = (orderBy == "Name" || orderBy == "Price") ? orderBy : "Name";  //VALOR POR DEFECTO = NAME
 
             //EMPIEZO A APLICAR FILTROS
-            Func<Product, Object> orderByFunc = null;
+            Func<Product, object> orderByFunc = null;
             if (orderBy == "Name")
                 orderByFunc = p => p.Name;
             else orderByFunc = p => p.Price;
