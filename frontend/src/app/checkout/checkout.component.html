@@ -1,25 +1,51 @@
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-8 col-sm-12">
-            <app-stepper  #appStepper>
-                <cdk-step [label]="'Direccion'" [completed]="checkoutForm.get('addressForm')?.valid">
-                    <app-checkout-address [checkoutForm]="checkoutForm"></app-checkout-address>
-                </cdk-step>
-                <cdk-step [label]="'Envio'" [completed]="checkoutForm.get('deliveryForm')?.valid">
-                    <app-checkout-delivery [checkoutForm]="checkoutForm"></app-checkout-delivery>
-                </cdk-step>
-                <cdk-step [label]="'Resumen'">
-                    <app-checkout-review></app-checkout-review>
-                </cdk-step>
-                <cdk-step [label]="'Pago'" [completed]="checkoutForm.get('paymentForm')?.valid" >
-                    <app-checkout-payment [checkoutForm]="checkoutForm"></app-checkout-payment>
-                </cdk-step>
-            </app-stepper>
-        </div>
-        <div class="col-md-4 col-sm-12">
-            <app-order-totals></app-order-totals>
+<div class="d-flex justify-content-center align-items-center flex-column">
+    <div class="page" *ngIf="(basket$ | async) === null">
+        <div class="container">
+            <div class="row height-custom">
+                <div class="col-12">
+                    <div class="d-flex align-items-center h-100">
+                        <div class="no-basket d-flex flex-column align-items-center">
+                            <p class="nobasket-message">Se necesita tener almenos 1 producto en la cesta para entrar en esta seccion</p>
+                            <p class="link-shop"> <a class="btn btn-primary my-btn" routerLink="/tienda">¡Empieza a Comprar!</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    
+    <div *ngIf="(basket$ | async) !== null" class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <app-stepper  #appStepper>
+                    <cdk-step [label]="'Dirección'" [completed]="checkoutForm.get('addressForm')?.valid">
+                        <app-checkout-address [checkoutForm]="checkoutForm"></app-checkout-address>
+                    </cdk-step>
+                    <cdk-step [label]="'Envío'" [completed]="checkoutForm.get('deliveryForm')?.valid">
+                        <app-checkout-delivery [checkoutForm]="checkoutForm"></app-checkout-delivery>
+                    </cdk-step>
+                    <cdk-step [label]="'Resumen'">
+                        <app-checkout-review></app-checkout-review>
+                    </cdk-step>
+                    <cdk-step [label]="'Pago'" [completed]="checkoutForm.get('paymentForm')?.valid" >
+                        <app-checkout-payment [checkoutForm]="checkoutForm"></app-checkout-payment>
+                    </cdk-step>
+                </app-stepper>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <app-order-totals></app-order-totals>
+            </div>
         </div>
     </div>
+    <div class="mb-2">
+        <app-footer></app-footer>
+    </div>
 </div>
+
+
+
+
+
+
    
 

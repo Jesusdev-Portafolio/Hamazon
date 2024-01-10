@@ -13,10 +13,11 @@ import { switchMap } from 'rxjs';
 export class AppComponent implements OnInit {
   title = 'Hamazon'; //espero los profes tengan sentido del humor :D
 
-  //TODO: Hacer hoja de pago /Checkout, ya tengo el modulo solo falta el html
-  //TODO: Paginar orders para tener los pedidos paginados.
-  //TODO: Hacer un boton en checkoutsucces component para volver a la tienda.
-  //TODO: el movil acomodar los inputs del order totals de basket
+
+  //TODO: Cuando tenga mi portafolio poner el link en este proyecto
+  //TODO: Cambiar el link a github cuando cambie el nombre del repo
+  //TODO:Cambiar el nombre de la tienda a Informatic
+  //TODO:cambiar el favIcon para que no salga el de angular
 
   constructor(private basketService: BasketService, private accountService:AccountService, private jwtService: JwtService) { }
 

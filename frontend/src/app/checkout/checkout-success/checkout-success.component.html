@@ -1,7 +1,16 @@
-<div class="container mt-5">
-    <div><i class="fa fa-check-circle fa-5x" style="color: green;"></i></div>
-    <h2>Gracias, pedido confirmado.</h2>   
-    <p class="mb-4"> Su pedido aun no se ha enviado, tampoco se enviará, esto no es una tienda real solo un proyecto de mi portafolio :D</p> 
-    <button *ngIf="order"class="btn btn-outline-success" routerLink="/pedidos/{{order.id}}"> Ver pedido </button>
-    <button *ngIf="!order"class="btn btn-outline-success" routerLink="/pedidos"> Ver pedidos </button>
+<div class="d-flex flex-column">
+    <div class="container mt-5 content d-flex flex-column justify-content-center text-center">
+        <div><i class="fa fa-check-circle fa-5x" style="color: green;"></i></div>
+        <h2>Gracias, pedido confirmado.</h2>   
+        <p class="mb-4"> Su pedido aun no se ha enviado, tampoco se enviará, esto no es una tienda real solo un proyecto de mi portafolio :D</p> 
+        <div class="text-center">
+            <button *ngIf="order"class="btn btn-outline-success mx-2" routerLink="/pedidos/{{order.id}}"> Ver pedido </button>
+            <button *ngIf="!order"class="btn btn-outline-success mx-2" routerLink="/pedidos"> Ver pedidos </button>
+            <button class=" mx-2 btn btn-primary" routerLink="/tienda"> Seguir Comprando </button>
+        </div>
+        
+    </div>
+    <div>
+        <app-footer></app-footer>
+    </div>    
 </div>

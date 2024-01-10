@@ -8,16 +8,16 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th scope="col" class="border-0 bg-light">
+                  <th scope="col" class="border-0 bg-title-table-no-border-bottom">
                     <div class="p-2 text-uppercase">Producto</div>
                   </th>
-                  <th scope="col" class="border-0 bg-light">
+                  <th scope="col" class="border-0 bg-title-table-no-border-bottom">
                     <div class="py-2 text-uppercase">Precio</div>
                   </th>
-                  <th scope="col" class="border-0 bg-light">
+                  <th scope="col" class="border-0 bg-title-table-no-border-bottom">
                     <div class="py-2 text-uppercase">Cantidad</div>
                   </th>
-                  <th scope="col" class="border-0 bg-light">
+                  <th scope="col" class="border-0 bg-title-table-no-border-bottom">
                     <div class="py-2 text-uppercase">Total</div>
                   </th>
                 </tr>
@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
-        <div class="bg-light px-4 py-3 text-uppercase font-weight-bold">Resumen Pedido</div>
+        <div class="bg-title-table px-4 py-3 text-uppercase font-weight-bold text-center">Resumen del Pedido</div>
         <div class="p-4">
           <ul class="list-unstyled mb-1">
             <li class="d-flex justify-content-between py-3 border-bottom">
@@ -65,6 +65,13 @@
           </ul>
         </div>
       </div>
+    </div>
+    <div class="d-flex justify-content-center mb-4">
+      <button class="mx-2 btn btn-info" routerLink="/pedidos"> Volver </button>
+      <button class="mx-2 btn btn-primary" routerLink="/tienda"> Tienda </button>
+    </div>
+    <div>
+    <app-footer></app-footer>
     </div>
   </div>
 

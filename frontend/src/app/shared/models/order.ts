@@ -27,4 +27,16 @@ export interface Order {
     price: number
     quantity: number
   }
+
+  export enum OrderOrderBy{
+    Date  = "date",
+    Price = "price",
+    Default = "none"
+  }
+
+  export enum OrderAscDesc{
+    Ascending = "asc",
+    Descending = "desc",
+    Default = "none"
+  }
   

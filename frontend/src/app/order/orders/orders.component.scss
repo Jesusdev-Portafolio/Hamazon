@@ -1,0 +1,29 @@
+.unselected{
+    color: rgba(0,0,0,.1);
+}
+
+.selected{
+    color: rgba(255,154,0,1);
+}
+
+.th-color{
+    background-color: rgba(44,62,80,1);
+    color:#eee
+}
+
+.custom-height{
+    height: 65vh;
+}
+
+.no-order-message{
+    font-size: 20px;
+    border-bottom: 2px solid orange;
+    margin-bottom: 5vh;
+    font-weight: bold;
+}
+
+@media(max-width: 600px){
+    .no-order-message{
+        font-size: 15px;
+    }
+}

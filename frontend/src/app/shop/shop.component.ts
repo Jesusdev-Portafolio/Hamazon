@@ -28,8 +28,8 @@ export class ShopComponent implements OnInit {
   selected : string;
   sortOptions = [
     {name: 'Nombre', value: 'Name'},
-    {name: 'Precio: Mas Baratos Primero', value: 'Price'}, // because in my API the default option is for Price ASC so no needed to explicit describe here
-    {name: 'Precio: Mas Caros Primero', value: 'PriceDesc'}
+    {name: 'Precio: Más Baratos Primero', value: 'Price'}, // because in my API the default option is for Price ASC so no needed to explicit describe here
+    {name: 'Precio: Más Caros Primero', value: 'PriceDesc'}
   ];
 
   constructor(private shopService: ShopService) { }

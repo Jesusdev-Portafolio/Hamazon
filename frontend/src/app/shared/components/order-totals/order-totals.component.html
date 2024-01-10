@@ -21,15 +21,23 @@
   </div>
 </div>
 <div class="movil">
+  <hr *ngIf="!inBasket" style="margin-top: -10px !important;">
   <div *ngIf="(basketTotals$ | async)">
     <div class="row">
-      <div class="col-7 line-hgth">
-        <p><i>Sub-Total </i><strong>&nbsp;{{(basketTotals$ | async).subtotal | currency:'EUR':'symbol'}}</strong> </p>
-        <p><i>Comisión(5%)<span
-              class="text-danger">*</span></i><strong>&nbsp;{{((basketTotals$ | async).total * 0.05) | currency:'EUR':'symbol'}}</strong>
+      <div class="line-heigth" [ngClass]="{'col-7': inBasket, 'col-12': !inBasket, 'not-in-basket': !inBasket}">
+        <p>
+          <i>Sub-Total </i>
+          <strong>&nbsp;{{(basketTotals$ | async).subtotal | currency:'EUR':'symbol'}}</strong> 
+        </p>
+        <p>
+          <i>Envío
+              <span class="text-danger">*</span>
+           </i>
+           <strong>{{ (basketTotals$ | async).shipping | currency:'EUR':'symbol'}}</strong>
         </p>
       </div>
-      <div class="col-5">
+      <hr *ngIf="!inBasket" class="mx-auto" style="margin-top: 5px; width: 90vw;" >
+      <div class="col-5" *ngIf="inBasket">
         <a routerLink="./../pago" class="btn btn-primary py-2 btn-block my-btn">Comprar</a>
       </div>
     </div>
@@ -37,11 +45,12 @@
       <div class="col-12">
         <div class="d-flex justify-content-between" style="margin-bottom: -10px;">
           <h3 style="font-size:180%;">Total </h3>
-          <h3><strong>{{((basketTotals$ | async).total * 1.05) | currency:'EUR':'symbol'}}</strong></h3>
+          <h3><strong>{{((basketTotals$ | async).total) | currency:'EUR':'symbol'}}</strong></h3>
         </div>
         <span style="color:rgba(100,100,100, .4); font-size:12px; margin-top: -115px;"> <span class="text-danger">*</span>
-          <i>Si me caes mal lo subo al 10%</i></span>
+          <i>Esto no es una tienda real solo un proyecto de mi portafolio</i></span>
       </div>
+      <hr *ngIf="!inBasket" class="mx-auto" style="margin-top: 5px; width: 90vw;" >
     </div>
   </div>
 </div>

@@ -1,12 +1,12 @@
 <div class="mt-4" *ngIf="checkoutForm" [formGroup]="checkoutForm">
     <div class="d-flex justify-content-between align-item-center">
-        <h4>Direccion de Envio</h4>
+        <h4>Dirección de Envío</h4>
         <button class="btn btn-outline-success mb-3" 
             (click)="saveUserAddress()"
             [disabled]="!checkoutForm.get('addressForm')?.valid || 
                 !checkoutForm.get('addressForm')?.dirty"
             >
-            Save as defaul address
+            Guardar dirección predeterminada
         </button>
     </div>
     <div class="row" formGroupName="addressForm">
@@ -37,6 +37,6 @@
         <i class="fa fa-angle-left"></i> Volver al carrito
     </button>
     <button [disabled]="checkoutForm?.get('addressForm')?.invalid" class="btn btn-primary" cdkStepperNext>
-        Ir a Envio <i class="fa fa-angle-right"></i>
+        ir a Envio <i class="fa fa-angle-right"></i>
     </button>
 </div>

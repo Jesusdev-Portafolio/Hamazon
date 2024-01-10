@@ -1,8 +1,10 @@
-.contact-number{
+.contact-portfolio{
+    margin-top: 10px;
     display: flex;
     width: 100vw;
     max-width: 100%;
     justify-content: center;
+    text-decoration: none;
 }
 .phone-number{
     color: white;
@@ -101,7 +103,7 @@
     }
 
     .nav-icons .nav-icon{
-        width: 220px;
+        width: 150px;
     }
     .nav-icons .nav-icon:hover {
         transform: translateY(-125%);
@@ -109,12 +111,12 @@
     .icon-style {
         /*esto para los estaticos*/
        
-        font-size: 200px;
+        font-size: 120px;
     }
     
     .icon-style-to-up {
       
-        font-size: 200px;
+        font-size: 120px;
     }
     
   }
@@ -157,12 +159,12 @@
     .icon-style {
         /*esto para los estaticos*/
        
-        font-size: 130px;
+        font-size: 100px;
     }
     
     .icon-style-to-up {
       
-        font-size: 130px;
+        font-size: 100px;
     }
     
   }

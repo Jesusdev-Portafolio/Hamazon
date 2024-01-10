@@ -17,12 +17,16 @@ import { validate } from 'uuid';
 export class CheckoutComponent implements OnInit {
  
   constructor(private fb: FormBuilder, private accountService: AccountService, private basketService: BasketService) {}
+  basket$: Observable<IBasket> = null;
 
   ngOnInit(): void {
+    this.basket$ = this.basketService.basket$;
     this.getAddresFromValues();
     setTimeout(() => this.getDeliveryMethodValue(), 200); //esto es por si refresca dentro del modulo de checkout, mientras se hace el suscribe
                                                           // el metodo de getDeliveryMethod llama al source pero como aun no ha completado el suscribe llega nulo
                                                           //asi que toca esperar cochinamente 2 decimas de segundo para darle tiempo, seguro hay otra forma mejor.
+
+
    }
 
   checkoutForm = this.fb.group({
@@ -60,7 +64,6 @@ export class CheckoutComponent implements OnInit {
 
    getDeliveryMethodValue() {
     const basket = this.basketService.getCurrentBasketValue();
-    console.log(basket);
     if (basket && basket.deliveryMethodId) {
       this.checkoutForm.get('deliveryForm')?.get('deliveryMethod')
         ?.patchValue(basket.deliveryMethodId.toString());
