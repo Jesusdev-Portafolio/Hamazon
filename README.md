@@ -1,4 +1,4 @@
-## Aplicación web - Tienda de Artículos Electrónicos - Hamazon
+## Aplicación web - Tienda de Artículos Electrónicos - Informatic
 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; background-color: rgba(255,255,255,0.05); padding-top:40px;padding-bottom:40px">
   <img src="readme_img/Hamazon_home_desktop.png" alt="Hamazon_Home" style="border: 1px solid  black; width: 700px"/>
@@ -58,7 +58,7 @@
 
 </div>
 
-## Imagenes
+## Imágenes
 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; background-color: rgba(255,255,255,0.05); padding-top:40px;padding-bottom:40px">
 
