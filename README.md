@@ -1,7 +1,7 @@
 ## Aplicación web - Tienda de Artículos Electrónicos - Informatic
 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; background-color: rgba(255,255,255,0.05); padding-top:40px;padding-bottom:40px">
-  <img src="readme_img/Hamazon_home_desktop.png" alt="Hamazon_Home" style="border: 1px solid  black; width: 700px"/>
+  <img src="readme_img/infromatic-responsive-img.png" alt="Hamazon_Home" style="border: 1px solid  black; width: 700px"/>
 </div>
 
   
@@ -62,18 +62,20 @@
 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; background-color: rgba(255,255,255,0.05); padding-top:40px;padding-bottom:40px">
 
-  <img src="readme_img/Hamazon_home_desktop.png" alt="Hamazon_Home" style="border: 1px solid  black; width: 700px"/>
-  <img src="readme_img/Hamazon_tienda_desktop.png" alt="Hamazon_Tienda" style="border: 1px solid  black; width: 700px; margin-top: 10px"/>
-  <img src="readme_img/Hamazon_carrito_desktop.png" alt="Hamazon_Carrito" style="border: 1px solid  black; width: 700px; margin-top: 10px"/>
+  <img src="readme_img/informatic-laptop-home.png" alt="Informatic_Home" style="border: 1px solid  black; width: 700px"/>
+  <img src="readme_img/informatic-laptop-tienda.png" alt="Informatic_Tienda" style="border: 1px solid  black; width: 700px; margin-top: 10px"/>
+  <img src="readme_img/informatic-laptop-cesta.png" alt="Informatic_Carrito" style="border: 1px solid  black; width: 700px; margin-top: 10px"/>
+  <img src="readme_img/informatic-laptop-pago.png" alt="Informatic_Pago" style="border: 1px solid  black; width: 700px; margin-top: 10px"/>
 
 </div>
 
 
 <div style=" display: flex; justify-content: center; align-items: center; margin-top:10px; background-color:rgba(255,255,255,0.05); flex-wrap:wrap; padding-top: 40px; padding-bottom:40px;">
 
-  <img src="readme_img/Hamazon_Home_mobile.png" alt="Hamazon_Home" style="border:1px solid black; height:300px;margin:15px"/>
-  <img src="readme_img/Hamazon_Tienda_mobile.png" alt="Hamazon_Tienda" style="border:1px solid black; height:300px;margin:15px"/>
-  <img src="readme_img/Hamazon_carrito_mobile.png" alt="Hamazon_Carrito" style="border:1px solid black; height:300px;margin:15px"/>
+  <img src="readme_img/informatic-mobile-home.png" alt="Informatic_Home" style="border:1px solid black; height:300px;margin:15px"/>
+  <img src="readme_img/informatic-mobile-tienda.png" alt="Informatic_Tienda" style="border:1px solid black; height:300px;margin:15px"/>
+  <img src="readme_img/informatic-mobile-cesta.png" alt="Informatic_Carrito" style="border:1px solid black; height:300px;margin:15px"/>
+  <img src="readme_img/informatic-mobile-pago.png" alt="Informatic_Pago" style="border:1px solid black; height:300px;margin:15px"/>
 
 </div>
 

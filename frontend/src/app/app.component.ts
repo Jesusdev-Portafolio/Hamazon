@@ -11,13 +11,10 @@ import { switchMap } from 'rxjs';
 })
 
 export class AppComponent implements OnInit {
-  title = 'Hamazon'; //espero los profes tengan sentido del humor :D
+  title = 'Informatic';
 
 
   //TODO: Cuando tenga mi portafolio poner el link en este proyecto
-  //TODO: Cambiar el link a github cuando cambie el nombre del repo
-  //TODO:Cambiar el nombre de la tienda a Informatic
-  //TODO:cambiar el favIcon para que no salga el de angular
 
   constructor(private basketService: BasketService, private accountService:AccountService, private jwtService: JwtService) { }
 
